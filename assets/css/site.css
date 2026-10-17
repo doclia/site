@@ -394,14 +394,21 @@ main:focus {
 
 .site-footer__social {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  column-gap: 1.5rem;
+  align-items: flex-start;
+  column-gap: 1rem;
 }
 
-.site-footer__social p,
+.site-footer__social p {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  margin: 0;
+}
+
 .site-footer__social ul {
   margin: 0;
+  column-gap: 1.25rem;
 }
 
 .site-footer__copy {
@@ -786,7 +793,7 @@ main:focus {
   width: 100%;
   min-height: var(--tap);
   padding: 0 0.875rem;
-  border: 1px solid var(--color-border-strong);
+  border: 1px solid var(--color-text-muted);
   border-radius: var(--radius-md);
   background: var(--color-bg);
   color: var(--color-text);
