@@ -63,6 +63,10 @@ body {
   min-height: 100vh;
 }
 
+picture {
+  display: block;
+}
+
 img,
 svg {
   display: block;
