@@ -257,6 +257,18 @@ p {
   text-decoration: none;
 }
 
+/* Sous 1024 px, les ancres défilent : fondu au bord droit pour le signaler (masque de transparence, sans couleur) */
+@media (max-width: 63.99rem) {
+  .site-nav {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 3rem), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 3rem), transparent);
+  }
+
+  .site-nav ul {
+    padding-right: 3rem;
+  }
+}
+
 .site-nav a:hover {
   color: var(--color-primary);
   text-decoration: underline;
@@ -580,6 +592,38 @@ main:focus {
   }
 }
 
+/* Page Établissements : étapes */
+.process {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: etape;
+}
+
+.process li {
+  position: relative;
+  min-height: 2.5rem;
+  padding: 0.375rem 0 0 3.5rem;
+  counter-increment: etape;
+}
+
+.process li::before {
+  content: counter(etape);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-weight: 700;
+}
+
 /* L'élève garde la main */
 .split {
   display: grid;
@@ -606,6 +650,11 @@ main:focus {
 .points li {
   padding-left: 1.25rem;
   border-left: 4px solid var(--color-secondary);
+}
+
+.points--wide {
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .points strong {
@@ -789,6 +838,12 @@ main:focus {
 
 .field .hint {
   margin: 0.5rem 0 0;
+}
+
+.form__required {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
 }
 
 .form .btn {

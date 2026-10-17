@@ -244,7 +244,7 @@
       <h2 id="notre-histoire-titre">Doclia est né d'une nécessité</h2>
       <figure class="story">
         <!-- Image Photo du fondateur — fichier images/photo-fondateur.webp (960 × 1200) -->
-        <img class="story__photo media" src="/images/photo-fondateur.webp" width="960" height="1200" alt="" loading="lazy">
+        <img class="story__photo media" src="/images/photo-fondateur.webp" width="960" height="1200" alt="Portrait de José Girard, fondateur de Doclia" loading="lazy">
         <div>
           <blockquote>
             <!-- Texte 9 — Notre histoire : citation -->
@@ -267,6 +267,8 @@
       <p class="lead">Doclia ouvre progressivement. Inscrivez-vous : vous serez prévenu en premier, et invité à l'essayer. Votre adresse ne sert qu'à cela : jamais vendue, jamais cédée, jamais de publicité.</p>
       <!-- Formulaire — non branché avant S3 (l'adresse de la fonction waitlist sera posée dans action) -->
       <form class="form" method="post">
+        <!-- Texte 10 — Formulaire : ligne en tête (champs obligatoires) -->
+        <p class="form__required">Tous les champs sont obligatoires, sauf la case « plusieurs enfants ».</p>
         <div class="field">
           <!-- Texte 10 — Formulaire : adresse -->
           <label for="email">Votre adresse e-mail</label>
@@ -291,8 +293,7 @@
         </div>
         <div class="field field--check">
           <!-- Texte 10 — Formulaire : case d'accord (jamais pré-cochée) -->
-          <label class="choice"><input type="checkbox" name="consent" value="true" required> J'accepte de recevoir les informations sur l'ouverture de Doclia</label>
-          <p class="hint">(<a href="/confidentialite">Politique de confidentialité</a>)</p>
+          <label class="choice"><input type="checkbox" name="consent" value="true" required> <span>J'accepte de recevoir les informations sur l'ouverture de Doclia (voir la <a href="/confidentialite">politique de confidentialité</a>)</span></label>
         </div>
         <input type="hidden" name="locale" value="fr-FR">
         <input type="hidden" name="consent_version" value="">
@@ -330,7 +331,7 @@
         <!-- Texte 11 — Question 8 -->
         <details><summary>Mon enfant est absent, et le cours continue.</summary><p>Ses cours peuvent lui arriver quand même, et son AESH peut travailler avec lui à distance.</p></details>
         <!-- Texte 11 — Question 9 -->
-        <details><summary>Où sont stockées les données ?</summary><p>Voir l'<a href="#l-eleve-garde-la-main">encadré de la section 7</a> et la <a href="/confidentialite">politique de confidentialité</a>.</p></details>
+        <details><summary>Où sont conservées les données ?</summary><p>En France. Les documents et les données de votre enfant sont conservés en France ; les services que nous ne faisons pas nous-mêmes sont encadrés par contrat, conformément au RGPD. Le détail est dans notre <a href="/confidentialite">politique de confidentialité</a>.</p></details>
         <!-- Texte 11 — Question 10 -->
         <details><summary>Que faites-vous de mon adresse e-mail ?</summary><p>Elle sert à vous écrire, rien d'autre. Doclia ne vend ni ne cède jamais les adresses ni les données de ses utilisateurs, n'affiche aucune publicité et n'utilise aucun cookie ni traceur publicitaire. C'est un engagement du fondateur, pas une ligne de conditions générales.</p></details>
         <!-- Texte 11 — Question 11 -->
