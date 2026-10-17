@@ -1,2 +1,1 @@
-# site
-Doclia Website
+Site vitrine doclia.fr — © DOCLIA SASU, tous droits réservés.
