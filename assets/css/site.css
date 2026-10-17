@@ -1,0 +1,410 @@
+/* Doclia — site vitrine doclia.fr
+   Valeurs issues de la charte graphique Doclia V1.0 (§3 à §8) et de brand-tokens.txt.
+   Aucun style en ligne ailleurs : la CSP interdit 'unsafe-inline'. */
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/inter-latin.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #254C73;
+  --color-primary-hover: #1F4163;
+  --color-primary-active: #18334F;
+  --color-secondary: #3AAFA9;
+  --color-secondary-text: #1F7F7A;
+  --color-text: #1E313D;
+  --color-text-muted: #5E6B73;
+  --color-text-inverse: #FFFFFF;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F8FAFC;
+  --color-bg-soft: #E8F7F1;
+  --color-border: #D8E1E8;
+  --color-border-strong: #B8C7D3;
+
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+
+  --radius-md: 0.75rem;
+  --radius-xl: 1.25rem;
+  --shadow-xs: 0 1px 2px rgba(30, 49, 61, 0.06);
+  --shadow-sm: 0 2px 6px rgba(30, 49, 61, 0.08);
+
+  --gutter: 1rem;
+  --container: 1200px;
+  --readable: 72ch;
+  --tap: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: 8rem;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.625;
+  font-optical-sizing: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--color-primary);
+  text-underline-offset: 0.15em;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-secondary-text);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-primary);
+  margin: 0 0 1rem;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 760;
+}
+
+h2 {
+  font-size: 1.625rem;
+  line-height: 2.125rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.375rem;
+  line-height: 1.875rem;
+  font-weight: 650;
+}
+
+p {
+  margin: 0 0 1rem;
+  max-width: var(--readable);
+}
+
+/* Utilitaires */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Lien d'évitement */
+
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-weight: 650;
+  border-radius: var(--radius-md);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
+  color: var(--color-text-inverse);
+}
+
+/* Boutons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  padding: 0 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 650;
+  line-height: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: var(--color-text-inverse);
+}
+
+.btn:active {
+  background: var(--color-primary-active);
+  border-color: var(--color-primary-active);
+}
+
+/* En-tête */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__bar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "logo . cta"
+    "nav nav nav";
+  align-items: center;
+  column-gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.site-header__logo {
+  grid-area: logo;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+}
+
+.site-header__logo img {
+  width: 6.5rem;
+}
+
+.site-header__cta {
+  grid-area: cta;
+}
+
+.site-header__cta .btn {
+  padding: 0 0.875rem;
+  font-size: 0.875rem;
+}
+
+.site-nav {
+  grid-area: nav;
+  overflow-x: auto;
+  margin: 0 calc(-1 * var(--gutter));
+  padding: 0 var(--gutter);
+}
+
+.site-nav ul {
+  display: flex;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+@media (min-width: 64rem) {
+  .site-header__bar {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo nav cta";
+    padding-top: 0;
+    min-height: 4.5rem;
+  }
+
+  .site-header__logo img {
+    width: 8rem;
+  }
+
+  .site-nav {
+    margin: 0;
+    overflow: visible;
+    justify-self: center;
+  }
+
+  .site-header__cta .btn {
+    padding: 0 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  html {
+    scroll-padding-top: 6rem;
+  }
+}
+
+/* À fort zoom ou sur un écran bas, l'en-tête ne reste pas collé : il masquerait le contenu. */
+@media (max-height: 34rem) {
+  .site-header {
+    position: static;
+  }
+
+  html {
+    scroll-padding-top: 0;
+  }
+}
+
+/* Contenu */
+
+main {
+  display: block;
+  flex: 1 0 auto;
+}
+
+main:focus {
+  outline: none;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section--alt {
+  background: var(--color-bg-alt);
+}
+
+.page-intro {
+  padding: 3rem 0 4rem;
+}
+
+@media (min-width: 51.25rem) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .page-intro {
+    padding: 4.5rem 0 5rem;
+  }
+}
+
+/* Pied de page */
+
+.site-footer {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  padding: 3rem 0 2rem;
+  font-size: 0.9375rem;
+}
+
+.site-footer a {
+  color: var(--color-text-inverse);
+}
+
+.site-footer a:hover {
+  color: var(--color-bg-soft);
+}
+
+.site-footer :focus-visible {
+  outline-color: var(--color-text-inverse);
+}
+
+.site-footer__baseline {
+  font-weight: 650;
+  font-size: 1.0625rem;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.5rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+}
+
+.site-footer__social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.site-footer__social p,
+.site-footer__social ul {
+  margin: 0;
+}
+
+.site-footer__copy {
+  margin: 1.5rem 0 0;
+  color: var(--color-bg-soft);
+  font-size: 0.875rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}
