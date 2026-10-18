@@ -31,6 +31,7 @@
   --radius-xl: 1.25rem;
   --shadow-xs: 0 1px 2px rgba(30, 49, 61, 0.06);
   --shadow-sm: 0 2px 6px rgba(30, 49, 61, 0.08);
+  --shadow-md: 0 8px 20px rgba(30, 49, 61, 0.10);
 
   --gutter: 1rem;
   --container: 1200px;
@@ -306,20 +307,25 @@ p {
   left: 0;
   right: 0;
   padding: 0.5rem var(--gutter) 1rem;
-  background: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
-  box-shadow: var(--shadow-md);
+  background: var(--color-bg-soft);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 3px solid var(--color-secondary);
+  /* Voile sur la page derrière le menu (ombre étendue), limité au-dessous de l'en-tête par clip-path */
+  box-shadow: var(--shadow-md), 0 0 0 100vmax rgba(30, 49, 61, 0.35);
+  clip-path: inset(0 -100vmax -100vmax -100vmax);
   max-height: calc(100vh - 4rem);
   overflow-y: auto;
 }
 
 .menu__panel li + li {
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border-strong);
 }
 
 .menu__panel a {
   min-height: 3.25rem;
+  color: var(--color-primary);
   font-size: 1rem;
+  font-weight: 600;
 }
 
 html {
