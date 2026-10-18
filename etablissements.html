@@ -8,6 +8,7 @@
   <meta name="description" content="Doclia pour les établissements, les PIAL et les académies : un même outil pour tous les binômes élève–AESH, sans liste à tenir ni compte à créer.">
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/menu.js" defer></script>
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/icons/favicon-192.png">
@@ -19,18 +20,29 @@
   <div class="container site-header__bar">
     <!-- Texte 1 — En-tête : logo (retour à l'accueil) -->
     <a class="site-header__logo" href="/"><img src="/assets/img/logo.svg" width="890" height="350" alt="Doclia — accueil"></a>
-    <!-- Texte 1 — En-tête : ancres -->
+    <!-- Texte 1 — En-tête : ancres. Les cinq liens figurent deux fois : liste pour ordinateur, puis menu replié pour mobile. Un changement se fait dans les deux. -->
     <nav class="site-nav" aria-label="Navigation principale">
-      <ul>
+      <ul class="site-nav__list">
         <li><a href="/#comment-ca-marche">Comment ça marche</a></li>
         <li><a href="/#pour-qui">Pour qui</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
         <li><a href="/#notre-histoire">Notre histoire</a></li>
         <li><a href="/etablissements">Établissements</a></li>
       </ul>
+      <details class="menu">
+        <!-- Texte d'interface — bouton du menu replié (mobile) -->
+        <summary class="menu__toggle"><svg class="menu__icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu__icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Menu</span></summary>
+        <ul class="menu__panel">
+        <li><a href="/#comment-ca-marche">Comment ça marche</a></li>
+        <li><a href="/#pour-qui">Pour qui</a></li>
+        <li><a href="/#tarifs">Tarifs</a></li>
+        <li><a href="/#notre-histoire">Notre histoire</a></li>
+        <li><a href="/etablissements">Établissements</a></li>
+        </ul>
+      </details>
     </nav>
-    <!-- Texte 1 — En-tête : bouton principal -->
-    <div class="site-header__cta"><a class="btn" href="/#liste-attente">Rejoindre la liste d'attente</a></div>
+    <!-- Texte 1 — En-tête : bouton principal (mobile : « Je m'inscris » ; ordinateur : libellé complet) -->
+    <div class="site-header__cta"><a class="btn" href="/#liste-attente"><span class="cta-short">Je m'inscris</span><span class="cta-long">Rejoindre la liste d'attente</span></a></div>
   </div>
 </header>
 <!-- FIN EN-TÊTE -->
