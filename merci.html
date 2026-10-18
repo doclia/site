@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Merci ! — Doclia</title>
+  <title>Merci ! — Doclia</title>
   <!-- Page de parcours : non indexée (textes V1.8) -->
   <meta name="robots" content="noindex">
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
   <script src="/assets/js/menu.js" defer></script>
+  <!-- Mesure d’audience : Vercel Web Analytics, sans cookie, servi par le même domaine (décision CEO 18/10 18:48 ; brief §2.4) -->
+  <script src="/_vercel/insights/script.js" defer></script>
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/icons/favicon-192.png">
@@ -51,7 +53,7 @@
   <section class="page-intro">
     <div class="container">
       <!-- Page /merci — titre et texte -->
-      <h1>Merci !</h1>
+      <h1>Merci !</h1>
       <p>Un e-mail de confirmation vient de vous être envoyé. Cliquez sur le lien qu’il contient pour finaliser votre inscription. Pensez à vérifier vos courriers indésirables.</p>
     </div>
   </section>
@@ -69,17 +71,15 @@
       <li><a href="/etablissements">Établissements</a></li>
     </ul>
     <!-- Texte 12 — Pied de page : contact -->
-    <p>Contact : <a href="mailto:contact@doclia.fr">contact@doclia.fr</a></p>
-    <!-- Texte 12 — Pied de page : réseaux -->
+    <p>Contact : <a href="mailto:contact@doclia.fr">contact@doclia.fr</a></p>
+    <!-- Texte 12 — Pied de page : réseaux (textes V1.15 : LinkedIn seul, conditionnel — décisions CEO 18/10 19:56 et 20:00) -->
     <div class="site-footer__social">
-    <p>Réseaux :</p>
+    <p>Réseaux :</p>
     <ul class="site-footer__links">
       <li><a href="https://www.linkedin.com/company/doclia" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://www.facebook.com/doclia.fr" rel="noopener">Facebook</a></li>
-      <li><a href="https://www.instagram.com/doclia.fr" rel="noopener">Instagram</a></li>
-      <li><a href="https://www.youtube.com/@Doclia" rel="noopener">YouTube</a></li>
     </ul>
     </div>
+    <p><mark class="marqueur">[CONDITIONNEL — page LinkedIn complétée par le CEO ; sinon, aucun lien réseau à la mise en ligne]</mark></p>
     <!-- Texte 12 — Pied de page : copyright -->
     <p class="site-footer__copy">© Doclia SASU — 2026</p>
   </div>

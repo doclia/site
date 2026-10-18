@@ -31,6 +31,14 @@ for nom in PAGES:
         reference.setdefault(bloc, (nom, m.group(0)))
         if m.group(0) != reference[bloc][1]:
             erreurs.append(f"{nom} : {bloc} différent de {reference[bloc][0]}")
+    # Typographie française (CMO 18/10 19:37) : espace fine insécable U+202F avant : ; ? ! et dans « », jamais une espace ordinaire ;
+    # apostrophe typographique (CEO 18/10 16:59). Texte visible et attributs alt/content/aria-label/title seulement.
+    visible = re.sub(r"<!--.*?-->|<script\b.*?</script>|<style\b.*?</style>", "", html, flags=re.S)
+    textes = re.sub(r"<[^>]+>", "\n", visible)
+    textes += "\n" + "\n".join(re.findall(r'\s(?:alt|content|aria-label|title)="([^"]*)"', visible))
+    for motif, quoi in ((r"[ \u00a0][:;?!»]", "espace ordinaire avant : ; ? ! ou »"), (r"«[ \u00a0]", "espace ordinaire après «"), (r"[A-Za-zÀ-ÿ]'[A-Za-zÀ-ÿ]", "apostrophe droite")):
+        for m in re.finditer(motif, textes):
+            erreurs.append(f"{nom} : {quoi} — « {textes[max(0,m.start()-25):m.end()+5].strip()} »")
     if re.search(r"<style\b", html, re.I): erreurs.append(f"{nom} : balise <style>")
     for s in re.findall(r"<script\b[^>]*>", html, re.I):
         if "src=" not in s: erreurs.append(f"{nom} : script en ligne")
