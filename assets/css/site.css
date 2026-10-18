@@ -24,6 +24,8 @@
   --color-bg-soft: #E8F7F1;
   --color-border: #D8E1E8;
   --color-border-strong: #B8C7D3;
+  --color-warning: #B26A00;
+  --color-warning-bg: #FFF4D6;
 
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
 
@@ -836,6 +838,10 @@ main:focus {
     grid-template-columns: 16rem 1fr;
     gap: 3rem;
   }
+
+  .story__photo {
+    max-width: none;
+  }
 }
 
 /* Formulaire */
@@ -984,6 +990,45 @@ main:focus {
 
 .faq details p {
   margin: 0 0 1.25rem;
+}
+
+/* Pages légales */
+.legal h2 {
+  margin-top: 2.25rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.legal p,
+.legal li {
+  max-width: var(--readable);
+}
+
+.legal ul {
+  padding-left: 1.25rem;
+}
+
+.legal li + li {
+  margin-top: 0.5rem;
+}
+
+.legal p {
+  overflow-wrap: anywhere;
+}
+
+.legal__date {
+  margin-top: 2.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+/* Marqueur bloquant visible sur l'aperçu ; ne se publie jamais (controles/marqueurs.py) */
+.marqueur {
+  padding: 0 0.25rem;
+  background: var(--color-warning-bg);
+  color: var(--color-text);
+  border: 1px dashed var(--color-warning);
+  border-radius: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
