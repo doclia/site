@@ -7,4 +7,5 @@
 5. **Voir l'aperçu** : dans la demande de fusion, Vercel publie en une minute un lien « Preview » : le site modifié, non indexé.
 6. **Publier** : si l'aperçu convient, « Merge pull request ». La fusion sur `main` publie le site.
 7. **Ensuite** : le CMO reporte le texte modifié dans `Doclia_Site_Textes_V1.md` (le site fait foi, pas l'inverse).
-8. Un doute, une balise cassée : ne pas fusionner, le signaler au relais `docs/Doclia_Site_Relais.md`.
+8. **Apostrophe** : le site emploie l'apostrophe typographique ’ (et non la touche ' du clavier). Pour en taper une sur github.com : la copier depuis un texte existant du fichier.
+9. Un doute, une balise cassée : ne pas fusionner, le signaler au relais `docs/Doclia_Site_Relais.md`.
