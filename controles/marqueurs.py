@@ -26,6 +26,7 @@ MOTIFS = [
     ("[EN ATTENTE", re.compile(r"\[\s*EN ATTENTE", re.I)),
     ("[CONDITIONNEL", re.compile(r"\[\s*CONDITIONNEL", re.I)),
     ("06 XX XX XX XX", re.compile(r"0\d(?:[\s.]*XX){4}", re.I)),
+    ("[CPO/CFO/COS/CEO :", re.compile(r"\[\s*(?:CPO|CFO|COS|CEO)\b")),
     ('class="marqueur"', re.compile(r'class="[^"]*\bmarqueur\b')),
 ]
 COMMENTAIRE = re.compile(r"<!--.*?-->", re.S)

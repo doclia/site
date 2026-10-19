@@ -66,7 +66,7 @@
         <!-- Texte 2 — Accroche : titre -->
         <h1>Chaque élève a son espace. Et quand il est accompagné, son AESH y travaille avec lui.</h1>
         <!-- Texte 2 — Accroche : sous-titre -->
-        <p class="lead">Doclia est le classeur numérique de l’élève : ses cours rangés par matière, photographiés en classe, adaptés quand il le faut. Pour l’élève accompagné, son AESH travaille avec lui, en classe ou à distance ; l’élève décide qui est connecté, et la famille suit.</p>
+        <p class="lead">Doclia est le classeur numérique de l’élève : ses cours photographiés, rangés, adaptés quand il le faut. Son AESH y travaille avec lui, et l’élève décide qui est connecté.</p>
         <!-- Texte 2 — Accroche : bouton -->
         <p><a class="btn btn--lg" href="#liste-attente">Rejoindre la liste d’attente</a></p>
         <!-- Texte 2 — Accroche : sous le bouton -->
@@ -90,6 +90,8 @@
         <!-- Texte 3 — Le constat : chiffre 3 -->
         <li class="stat"><span class="stat__num">8 sur 10</span> <span class="stat__label">AESH accompagnent plusieurs élèves</span></li>
       </ul>
+      <!-- Texte 3 — Le constat : sources (GO CEO 19/10) -->
+      <p class="stats__sources">Sources : DGESCO, rentrée 2025 (relevé Maire-info du 29/09/2026) ; IGAS–IGÉSR, janvier 2026 ; DEPP, note d’information 25.63.</p>
       <!-- Texte 3 — Le constat : texte -->
       <p class="lead">Un AESH passe d’un élève à l’autre, d’une salle à l’autre, parfois d’un établissement à l’autre. L’élève, lui, change d’accompagnant au fil de l’année. Les cours sont sur des feuilles volantes, dans un cahier, dans une photo sur un téléphone. Ce qui a été fait un lundi est perdu le jeudi. Doclia est né de cette réalité.</p>
     </div>
@@ -104,6 +106,9 @@
         <article class="step">
           <!-- Image IMG-2 — fichier images/img-2.webp (1536 × 1024) -->
           <picture><source srcset="/images/img-2.avif" type="image/avif"><img class="media" src="/images/img-2.webp" width="1200" height="800" alt="Un élève photographie une feuille de cours avec son téléphone." loading="lazy"></picture>
+          <!-- Capture réelle 4.1 (classeur par matière, monde démo, non retouchée) — emplacement prêt, affiché seulement quand le CTO la livre (GO CEO 19/10). À la livraison :
+          <picture class="step__capture"><source srcset="/images/capture-4-1.avif" type="image/avif"><img class="media" src="/images/capture-4-1.webp" width="1200" height="800" alt="[alt à rédiger]" loading="lazy"></picture>
+          -->
           <div class="step__body">
             <!-- Texte 4.1 — L'élève a son classeur : titre -->
             <h3>L’élève a son classeur</h3>
@@ -114,6 +119,9 @@
         <article class="step">
           <!-- Image IMG-3 — fichier images/img-3.webp (1536 × 1024) -->
           <picture><source srcset="/images/img-3.avif" type="image/avif"><img class="media" src="/images/img-3.webp" width="1200" height="800" alt="Un élève chez lui et son AESH dans un autre lieu travaillent sur le même document, au même moment." loading="lazy"></picture>
+          <!-- Capture réelle 4.2 (document photographié devenu modifiable, monde démo, non retouchée) — emplacement prêt, affiché seulement quand le CTO la livre (GO CEO 19/10). À la livraison :
+          <picture class="step__capture"><source srcset="/images/capture-4-2.avif" type="image/avif"><img class="media" src="/images/capture-4-2.webp" width="1200" height="800" alt="[alt à rédiger]" loading="lazy"></picture>
+          -->
           <div class="step__body">
             <!-- Texte 4.2 — L'AESH travaille avec lui, en direct : titre -->
             <h3>L’AESH travaille avec lui, en direct</h3>
@@ -124,6 +132,9 @@
         <article class="step">
           <!-- Image IMG-4 — fichier images/img-4.webp (1536 × 1024) -->
           <picture><source srcset="/images/img-4.avif" type="image/avif"><img class="media" src="/images/img-4.webp" width="1200" height="800" alt="Un texte dense devient un texte aéré, avec le même contenu." loading="lazy"></picture>
+          <!-- Capture réelle 4.3 (texte adapté, monde démo, non retouchée) — emplacement prêt, affiché seulement quand le CTO la livre (GO CEO 19/10). À la livraison :
+          <picture class="step__capture"><source srcset="/images/capture-4-3.avif" type="image/avif"><img class="media" src="/images/capture-4-3.webp" width="1200" height="800" alt="[alt à rédiger]" loading="lazy"></picture>
+          -->
           <div class="step__body">
             <!-- Texte 4.3 — Reformuler et adapter, sans appauvrir : titre -->
             <h3>Reformuler et adapter, sans appauvrir</h3>
@@ -136,7 +147,8 @@
   </section>
 
   <!-- ==================== 5. LA DÉMONSTRATION ==================== -->
-  <section class="section section--alt" id="demonstration" aria-labelledby="demonstration-titre">
+  <!-- Section 5 — MASQUÉE (attribut hidden) tant qu’IMG-7 n’est pas livrée : jamais de cadre vide (GO CEO 19/10). Pour l’afficher : déposer images/img-7.avif et .webp, puis retirer « hidden ». Aucun lien de menu ne pointe vers elle. -->
+  <section class="section section--alt" id="demonstration" aria-labelledby="demonstration-titre" hidden>
     <div class="container">
       <!-- Texte 5 — La démonstration : titre -->
       <h2 id="demonstration-titre">Deux écrans, un binôme</h2>
@@ -176,7 +188,7 @@
           <!-- Texte 6 — Carte 3 : titre -->
           <h3>L’AESH</h3>
           <!-- Texte 6 — Carte 3 : texte -->
-          <p>Doclia est votre assistant. Il vous donne les moyens que l’école, aujourd’hui, n’est pas en mesure de vous donner : un espace de travail avec l’élève, des documents adaptés en quelques gestes, un suivi qui ne se perd pas d’un jour à l’autre ni d’une année à l’autre. Pour vous, Doclia est gratuit et le restera : rien à payer, jamais, et aucune contrepartie — ni témoignage, ni promotion, ni recrutement. Vous accompagnez ; Doclia vous épaule.</p>
+          <p>Doclia est votre assistant. Il vous donne ce qui manque souvent au quotidien : un espace de travail avec l’élève, des documents adaptés en quelques gestes, un suivi qui ne se perd pas d’un jour à l’autre ni d’une année à l’autre. Pour vous, Doclia est gratuit et le restera : rien à payer, jamais, et aucune contrepartie — ni témoignage, ni promotion, ni recrutement. Vous accompagnez ; Doclia vous épaule.</p>
         </article>
         <article class="card">
           <img class="card__icon" src="/images/picto-etablissement.svg" width="64" height="64" alt="">
@@ -207,8 +219,9 @@
           <li><strong>La famille suit.</strong> Le journal de bord réunit ce que l’AESH a noté et ce qui a été classé, renommé ou mis à la corbeille pendant les sessions ; l’élève voit quels AESH se sont connectés à son espace, et quand pour la dernière fois.</li>
         </ul>
         <div>
-          <!-- Image IMG-6 — fichier images/img-6.webp (1600 × 400, dimensions provisoires) -->
-          <img class="media" src="/images/img-6.webp" width="1600" height="400" alt="" loading="lazy">
+          <!-- Image IMG-6 — RETIRÉE tant que la capture n’est pas livrée (jamais de cadre vide, GO CEO 19/10). À la livraison, rétablir :
+          <img class="media" src="/images/img-6.webp" width="1600" height="400" alt="[alt à rédiger]" loading="lazy">
+          -->
           <!-- Texte 7 — Encadré données (COS) -->
           <p class="callout">Les documents et les données de votre enfant sont conservés en France. Les services que nous ne faisons pas nous-mêmes sont encadrés par contrat, conformément au RGPD. Nous ne vendons ni ne cédons jamais vos données, et nous n’utilisons aucun cookie ni traceur publicitaire, ni sur le site ni dans l’application. Le détail figurera dans la politique de confidentialité de l’application, publiée avant son ouverture.</p>
         </div>
@@ -226,8 +239,11 @@
           <!-- Texte 8 — Offre Élève -->
           <h3>Élève</h3>
           <p class="price__amount">49 € par an</p>
-          <p class="price__sub">moins de 4 € par mois</p>
+          <p class="price__sub">à peine plus de 4 € par mois</p>
           <p>Tout élève, du collège aux études supérieures</p>
+          <!-- Texte 8 — Offre Élève : ce qui est inclus -->
+          <p class="price__label">Ce qui est inclus</p>
+          <p>Le classeur par matière, les cours photographiés et rangés, les textes de cours adaptés</p>
         </article>
         <article class="price price--main">
           <!-- Texte 8 — Offre Élève + AESH -->
@@ -235,15 +251,22 @@
           <p class="price__amount">83 € par an</p>
           <p class="price__sub">moins de 7 € par mois</p>
           <p>L’élève accompagné et son AESH</p>
+          <!-- Texte 8 — Offre Élève + AESH : ce qui est inclus -->
+          <p class="price__label">Ce qui est inclus</p>
+          <p>Tout ce que comprend l’offre Élève, plus les sessions avec son AESH, en classe et à distance, et le journal de bord pour la famille</p>
         </article>
         <article class="price">
           <!-- Texte 8 — Offre Établissement -->
           <h3>Établissement</h3>
           <p class="price__amount">Sur contact</p>
           <p>Pour équiper tous les binômes</p>
+          <!-- Texte 8 — Offre Établissement : ce qui est inclus -->
+          <p class="price__label">Ce qui est inclus</p>
           <p><a href="/etablissements">Voir la page Établissements</a></p>
         </article>
       </div>
+      <!-- Texte 8 — marqueur CPO (visible jusqu’à sa confirmation ; bloque S6) -->
+      <p><mark class="marqueur">[CPO : chaque élément de « Ce qui est inclus » existe au jour J, et dans l’offre indiquée]</mark></p>
       <ul class="price-notes">
         <!-- Texte 8 — Tarifs : note 1 -->
         <li>Doclia est gratuit pour l’AESH, et le restera : c’est la famille ou l’établissement qui équipe l’élève. Aucune contrepartie ne sera jamais demandée à l’AESH.</li>
@@ -282,7 +305,7 @@
       <!-- Texte 10 — Liste d'attente : titre -->
       <h2 id="liste-attente-titre">Rejoignez la liste d’attente</h2>
       <!-- Texte 10 — Liste d'attente : texte -->
-      <p class="lead">Doclia ouvre progressivement. Inscrivez-vous : vous serez prévenu en premier, et invité à l’essayer. Votre adresse ne sert qu’à cela : jamais vendue, jamais cédée, jamais de publicité.</p>
+      <p class="lead">Doclia ouvre progressivement. Inscrivez-vous : vous serez prévenu en premier, et invité à l’essayer. Votre adresse ne sert qu’à cela.</p>
       <!-- Formulaire — non branché avant S3 (l'adresse de la fonction waitlist sera posée dans action) -->
       <form class="form" method="post">
         <!-- Texte 10 — Formulaire : ligne en tête (champs obligatoires) -->
@@ -341,7 +364,7 @@
         <!-- Texte 11 — Question 4 -->
         <details><summary>Qui peut voir les documents de mon enfant ?</summary><p>L’élève, sa famille, et l’AESH pendant la session de travail que l’élève a ouverte, et seulement pendant celle-ci. Session terminée ou interrompue : l’AESH n’accède plus ni aux documents ni à l’espace de l’élève. Rien n’est consultable en dehors d’une session. L’établissement ne lit jamais les documents, les cours ni le journal de l’élève.</p></details>
         <!-- Texte 11 — Question 5 -->
-        <details><summary>Faut-il que l’école soit équipée ?</summary><p>Non. Une famille peut équiper son enfant seule. L’AESH n’a rien à payer, aujourd’hui comme demain, et rien ne lui sera demandé en échange.</p></details>
+        <details><summary>Faut-il que l’école soit équipée ?</summary><p>Non. Une famille peut équiper son enfant seule, et l’AESH n’a rien à payer.</p></details>
         <!-- Texte 11 — Question 6 -->
         <details><summary>Est-ce que ça marche sur téléphone ?</summary><p>Oui. L’élève et l’AESH peuvent travailler depuis un ordinateur, une tablette ou un téléphone.</p></details>
         <!-- Texte 11 — Question 7 -->
