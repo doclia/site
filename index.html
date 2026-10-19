@@ -110,8 +110,8 @@
           <div class="step__media">
     <!-- Image IMG-2 — fichier images/img-2.webp (1536 × 1024) -->
             <picture><source srcset="/images/img-2.avif" type="image/avif"><img class="media" src="/images/img-2.webp" width="1200" height="800" alt="Un élève photographie une feuille de cours avec son téléphone." loading="lazy"></picture>
-            <!-- Capture réelle 4.1 — fichiers images/capture-4-1.avif et .webp (1200 × 750), monde démo, non retouchée ; alt : textes V1.25 -->
-            <picture class="step__capture"><source srcset="/images/capture-4-1.avif" type="image/avif"><img class="media" src="/images/capture-4-1.webp" width="1200" height="750" alt="Capture de l’application Doclia : la page « Mes classeurs » d’un élève, avec ses classeurs rangés par matière (français, mathématiques, SVT)." loading="lazy"></picture>
+            <!-- Capture réelle 4.1 — fichiers images/capture-4-1.avif et .webp (1200 × 634), recadrée sur la liste des classeurs (verdict CMO 19/10 22:38), monde démo, non retouchée ; alt : textes V1.25 -->
+            <picture class="step__capture"><source srcset="/images/capture-4-1.avif" type="image/avif"><img class="media" src="/images/capture-4-1.webp" width="1200" height="634" alt="Capture de l’application Doclia : la page « Mes classeurs » d’un élève, avec ses classeurs rangés par matière (français, mathématiques, SVT)." loading="lazy"></picture>
           </div>
           <div class="step__body">
             <!-- Texte 4.1 — L'élève a son classeur : titre -->
@@ -228,12 +228,10 @@
           <!-- Texte 7 — point 4 -->
           <li><strong>La famille suit.</strong> Le journal de bord réunit ce que l’AESH a noté et ce qui a été classé, renommé ou mis à la corbeille pendant les sessions ; l’élève voit quels AESH se sont connectés à son espace, et quand pour la dernière fois.</li>
         </ul>
-        <div>
-          <!-- Image IMG-6 — bandeau de session (images/img-6-bandeau.avif et .webp, 1920 × 100), monde démo, non retouché ; alt : textes V1.26 -->
-          <picture><source srcset="/images/img-6-bandeau.avif" type="image/avif"><img class="media bandeau" src="/images/img-6-bandeau.webp" width="1920" height="100" alt="Capture de l’application Doclia : le bandeau de session de l’élève indique le nom de l’AESH connecté, le temps restant et un bouton pour terminer la session." loading="lazy"></picture>
-          <!-- Texte 7 — Encadré données (COS) -->
-          <p class="callout">Les documents et les données de votre enfant sont conservés en France. Les services que nous ne faisons pas nous-mêmes sont encadrés par contrat, conformément au RGPD. Nous ne vendons ni ne cédons jamais vos données, et nous n’utilisons aucun cookie ni traceur publicitaire, ni sur le site ni dans l’application. Le détail figurera dans la politique de confidentialité de l’application, publiée avant son ouverture.</p>
-        </div>
+        <!-- Image IMG-6 — bandeau de session (images/img-6-bandeau.avif et .webp, 1920 × 100), monde démo, non retouché ; alt : textes V1.26. Affiché dès 768 px, en pleine largeur sous les quatre points ; masqué sur téléphone, où il serait illisible (verdict CMO 19/10 22:38) -->
+        <picture class="split__bandeau"><source srcset="/images/img-6-bandeau.avif" type="image/avif"><img class="media bandeau" src="/images/img-6-bandeau.webp" width="1920" height="100" alt="Capture de l’application Doclia : le bandeau de session de l’élève indique le nom de l’AESH connecté, le temps restant et un bouton pour terminer la session." loading="lazy"></picture>
+        <!-- Texte 7 — Encadré données (COS) -->
+        <p class="callout">Les documents et les données de votre enfant sont conservés en France. Les services que nous ne faisons pas nous-mêmes sont encadrés par contrat, conformément au RGPD. Nous ne vendons ni ne cédons jamais vos données, et nous n’utilisons aucun cookie ni traceur publicitaire, ni sur le site ni dans l’application. Le détail figurera dans la politique de confidentialité de l’application, publiée avant son ouverture.</p>
       </div>
     </div>
   </section>

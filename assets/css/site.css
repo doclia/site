@@ -772,12 +772,30 @@ main:focus {
   margin-top: 2rem;
 }
 
+/* Bandeau IMG-6 : absent sur téléphone (illisible), pleine largeur dès 768 px */
+.split__bandeau {
+  display: none;
+}
+
+@media (min-width: 48rem) {
+  .split__bandeau {
+    display: block;
+  }
+}
+
 @media (min-width: 64rem) {
   .split {
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-areas:
+      "points callout"
+      "bandeau bandeau";
+    gap: 2rem 3rem;
     align-items: start;
   }
+
+  .split > .points { grid-area: points; }
+  .split > .split__bandeau { grid-area: bandeau; }
+  .split > .callout { grid-area: callout; }
 }
 
 .points {
@@ -803,7 +821,7 @@ main:focus {
 }
 
 .callout {
-  margin: 1.5rem 0 0;
+  margin: 0;
   padding: 1.25rem 1.5rem;
   background: var(--color-bg-soft);
   border-radius: var(--radius-xl);
