@@ -36,7 +36,8 @@
       image.alt = source ? source.alt : "";
       image.src = lien.getAttribute("href");
       dialog.setAttribute("aria-label", image.alt);
-      dialog.classList.toggle("zoom-dialog--bandeau", lien.classList.contains("zoom--bandeau"));
+      // Variante d’affichage (data-zoom) : « bandeau » (très allongé), « tel » (écran de téléphone, en hauteur).
+      dialog.className = "zoom-dialog" + (lien.dataset.zoom ? " zoom-dialog--" + lien.dataset.zoom : "");
       origine = lien;
       dialog.showModal();
       fermer.focus();

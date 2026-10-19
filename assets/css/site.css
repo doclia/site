@@ -1250,3 +1250,77 @@ html:has(.zoom-dialog[open]) {
     width: min(90rem, 100%);
   }
 }
+
+/* Téléphone : un écran de téléphone s'affiche sur toute la largeur et se parcourt verticalement */
+@media (max-width: 47.99rem) {
+  .zoom-dialog--tel .zoom-dialog__cadre img {
+    width: 100%;
+  }
+}
+
+/* Bande sous le héros : écrans de téléphone réels, centrés, côte à côte à toutes les tailles */
+.apercu {
+  padding: 0 0 3rem;
+}
+
+.apercu__surtitre {
+  max-width: none;
+  margin: 0 0 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+}
+
+.apercu__ecrans {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.apercu__ecran {
+  flex: 0 1 15rem;
+  min-width: 0;
+}
+
+/* Légendes alignées sur une même ligne, même si les deux captures n'ont pas la même hauteur */
+.apercu__ecran figure {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+}
+
+.apercu__ecran .zoom {
+  border-radius: 1rem;
+}
+
+.apercu__ecran img {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  background: var(--color-bg-alt);
+}
+
+.apercu__ecran figcaption {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+@media (min-width: 48rem) {
+  .apercu__ecrans {
+    gap: 3rem;
+  }
+
+  .apercu__ecran {
+    flex-basis: 16rem;
+  }
+}
