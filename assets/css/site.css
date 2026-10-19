@@ -783,6 +783,12 @@ main:focus {
   }
 }
 
+/* Cadre ajusté à l'image : pas de bande vide sous le bandeau */
+.split__bandeau img {
+  display: block;
+  height: auto;
+}
+
 @media (min-width: 64rem) {
   .split {
     grid-template-columns: 1fr 1fr;
@@ -1123,4 +1129,9 @@ main:focus {
     scroll-behavior: auto !important;
     transition-duration: 0.001ms !important;
   }
+}
+
+/* Case « plusieurs enfants » : affichée seulement si le profil « Parent » est coché (sans script ; navigateur sans :has() : case visible, sans effet) */
+form:not(:has(input[name="profile"][value="parent"]:checked)) .champ-plusieurs-enfants {
+  display: none;
 }
