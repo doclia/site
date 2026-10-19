@@ -215,6 +215,7 @@ p {
 }
 
 .site-header__logo {
+  flex: none;
   display: inline-flex;
   align-items: center;
   min-height: var(--tap);
@@ -349,18 +350,9 @@ html {
   }
 
   .site-nav {
-    margin: 0 auto;
+    margin: 0 0 0 auto;
   }
 
-  .menu {
-    display: none;
-  }
-
-  .site-nav__list {
-    display: flex;
-    gap: 1.25rem;
-    white-space: nowrap;
-  }
 
   .site-header__cta .btn {
     padding: 0 1.25rem;
@@ -377,6 +369,34 @@ html {
 
   html {
     scroll-padding-top: 6.5rem;
+  }
+}
+
+/* Ligne de liens complète dès 1184 px (six liens depuis l’ajout de « La démonstration », 19/10) ; menu replié en dessous */
+@media (min-width: 74rem) {
+  .site-nav {
+    margin: 0 auto;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .site-nav {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  /* Les liens passent à la ligne plutôt que de déborder (espacement du texte agrandi, WCAG 1.4.12) */
+  .site-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1.25rem;
+  }
+
+  .site-nav__list a {
+    white-space: nowrap;
   }
 }
 
@@ -638,12 +658,36 @@ main:focus {
     gap: 3rem;
   }
 
-  .step:nth-child(even) .media {
+  .step:nth-child(even) .step__media {
     order: 2;
   }
 }
 
+/* Illustration et capture réelle d'un même geste */
+.step__media {
+  display: grid;
+  gap: 1rem;
+}
+
+.step__capture img {
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Bandeau de session (IMG-6) : capture très allongée, coins discrets */
+.media.bandeau {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
 /* Démonstration */
+.demo__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--color-bg-soft);
+}
+
 .demo {
   margin: 2rem 0 0;
 }

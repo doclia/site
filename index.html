@@ -18,6 +18,7 @@
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
   <script src="/assets/js/menu.js" defer></script>
+  <script src="/assets/js/demo.js" defer></script>
   <!-- Mesure d’audience : Vercel Web Analytics, sans cookie, servi par le même domaine (décision CEO 18/10 18:48 ; brief §2.4) -->
   <script src="/_vercel/insights/script.js" defer></script>
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
@@ -35,6 +36,7 @@
     <nav class="site-nav" aria-label="Navigation principale">
       <ul class="site-nav__list">
         <li><a href="/#comment-ca-marche">Comment ça marche</a></li>
+        <li><a href="/#demonstration">La démonstration</a></li>
         <li><a href="/#pour-qui">Pour qui</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
         <li><a href="/#notre-histoire">Notre histoire</a></li>
@@ -45,6 +47,7 @@
         <summary class="menu__toggle"><svg class="menu__icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu__icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Menu</span></summary>
         <ul class="menu__panel">
         <li><a href="/#comment-ca-marche">Comment ça marche</a></li>
+        <li><a href="/#demonstration">La démonstration</a></li>
         <li><a href="/#pour-qui">Pour qui</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
         <li><a href="/#notre-histoire">Notre histoire</a></li>
@@ -104,11 +107,12 @@
       <h2 id="comment-ca-marche-titre">Un espace, un binôme, trois gestes</h2>
       <div class="steps">
         <article class="step">
-          <!-- Image IMG-2 — fichier images/img-2.webp (1536 × 1024) -->
-          <picture><source srcset="/images/img-2.avif" type="image/avif"><img class="media" src="/images/img-2.webp" width="1200" height="800" alt="Un élève photographie une feuille de cours avec son téléphone." loading="lazy"></picture>
-          <!-- Capture réelle 4.1 (classeur par matière, monde démo, non retouchée) — emplacement prêt, affiché seulement quand le CTO la livre (GO CEO 19/10). À la livraison :
-          <picture class="step__capture"><source srcset="/images/capture-4-1.avif" type="image/avif"><img class="media" src="/images/capture-4-1.webp" width="1200" height="800" alt="[alt à rédiger]" loading="lazy"></picture>
-          -->
+          <div class="step__media">
+    <!-- Image IMG-2 — fichier images/img-2.webp (1536 × 1024) -->
+            <picture><source srcset="/images/img-2.avif" type="image/avif"><img class="media" src="/images/img-2.webp" width="1200" height="800" alt="Un élève photographie une feuille de cours avec son téléphone." loading="lazy"></picture>
+            <!-- Capture réelle 4.1 — fichiers images/capture-4-1.avif et .webp (1200 × 750), monde démo, non retouchée ; alt : textes V1.25 -->
+            <picture class="step__capture"><source srcset="/images/capture-4-1.avif" type="image/avif"><img class="media" src="/images/capture-4-1.webp" width="1200" height="750" alt="Capture de l’application Doclia : la page « Mes classeurs » d’un élève, avec ses classeurs rangés par matière (français, mathématiques, SVT)." loading="lazy"></picture>
+          </div>
           <div class="step__body">
             <!-- Texte 4.1 — L'élève a son classeur : titre -->
             <h3>L’élève a son classeur</h3>
@@ -117,11 +121,13 @@
           </div>
         </article>
         <article class="step">
-          <!-- Image IMG-3 — fichier images/img-3.webp (1536 × 1024) -->
-          <picture><source srcset="/images/img-3.avif" type="image/avif"><img class="media" src="/images/img-3.webp" width="1200" height="800" alt="Un élève chez lui et son AESH dans un autre lieu travaillent sur le même document, au même moment." loading="lazy"></picture>
-          <!-- Capture réelle 4.2 (document photographié devenu modifiable, monde démo, non retouchée) — emplacement prêt, affiché seulement quand le CTO la livre (GO CEO 19/10). À la livraison :
-          <picture class="step__capture"><source srcset="/images/capture-4-2.avif" type="image/avif"><img class="media" src="/images/capture-4-2.webp" width="1200" height="800" alt="[alt à rédiger]" loading="lazy"></picture>
-          -->
+          <div class="step__media">
+    <!-- Image IMG-3 — fichier images/img-3.webp (1536 × 1024) -->
+            <picture><source srcset="/images/img-3.avif" type="image/avif"><img class="media" src="/images/img-3.webp" width="1200" height="800" alt="Un élève chez lui et son AESH dans un autre lieu travaillent sur le même document, au même moment." loading="lazy"></picture>
+            <!-- Capture réelle 4.2 (document photographié devenu modifiable, monde démo, non retouchée) — emplacement prêt, affiché seulement quand le CTO la livre (GO CEO 19/10). À la livraison :
+            <picture class="step__capture"><source srcset="/images/capture-4-2.avif" type="image/avif"><img class="media" src="/images/capture-4-2.webp" width="1200" height="800" alt="[alt à rédiger]" loading="lazy"></picture>
+            -->
+          </div>
           <div class="step__body">
             <!-- Texte 4.2 — L'AESH travaille avec lui, en direct : titre -->
             <h3>L’AESH travaille avec lui, en direct</h3>
@@ -130,11 +136,13 @@
           </div>
         </article>
         <article class="step">
-          <!-- Image IMG-4 — fichier images/img-4.webp (1536 × 1024) -->
-          <picture><source srcset="/images/img-4.avif" type="image/avif"><img class="media" src="/images/img-4.webp" width="1200" height="800" alt="Un texte dense devient un texte aéré, avec le même contenu." loading="lazy"></picture>
-          <!-- Capture réelle 4.3 (texte adapté, monde démo, non retouchée) — emplacement prêt, affiché seulement quand le CTO la livre (GO CEO 19/10). À la livraison :
-          <picture class="step__capture"><source srcset="/images/capture-4-3.avif" type="image/avif"><img class="media" src="/images/capture-4-3.webp" width="1200" height="800" alt="[alt à rédiger]" loading="lazy"></picture>
-          -->
+          <div class="step__media">
+    <!-- Image IMG-4 — fichier images/img-4.webp (1536 × 1024) -->
+            <picture><source srcset="/images/img-4.avif" type="image/avif"><img class="media" src="/images/img-4.webp" width="1200" height="800" alt="Un texte dense devient un texte aéré, avec le même contenu." loading="lazy"></picture>
+            <!-- Capture réelle 4.3 (texte adapté, monde démo, non retouchée) — emplacement prêt, affiché seulement quand le CTO la livre (GO CEO 19/10). À la livraison :
+            <picture class="step__capture"><source srcset="/images/capture-4-3.avif" type="image/avif"><img class="media" src="/images/capture-4-3.webp" width="1200" height="800" alt="[alt à rédiger]" loading="lazy"></picture>
+            -->
+          </div>
           <div class="step__body">
             <!-- Texte 4.3 — Reformuler et adapter, sans appauvrir : titre -->
             <h3>Reformuler et adapter, sans appauvrir</h3>
@@ -147,18 +155,20 @@
   </section>
 
   <!-- ==================== 5. LA DÉMONSTRATION ==================== -->
-  <!-- Section 5 — MASQUÉE (attribut hidden) tant qu’IMG-7 n’est pas livrée : jamais de cadre vide (GO CEO 19/10). Pour l’afficher : déposer images/img-7.avif et .webp, puis retirer « hidden ». Aucun lien de menu ne pointe vers elle. -->
-  <section class="section section--alt" id="demonstration" aria-labelledby="demonstration-titre" hidden>
+  <section class="section section--alt" id="demonstration" aria-labelledby="demonstration-titre">
     <div class="container">
       <!-- Texte 5 — La démonstration : titre -->
       <h2 id="demonstration-titre">Deux écrans, un binôme</h2>
       <!-- Texte 5 — La démonstration : texte -->
       <p class="lead">À gauche, l’écran de l’AESH. À droite, celui de l’élève. Ce que vous voyez est l’application telle qu’elle fonctionne, pas une maquette.</p>
       <figure class="demo">
-        <!-- Image IMG-7 — fichier images/img-7.webp (1600 × 900, dimensions provisoires) -->
-        <img class="media" src="/images/img-7.webp" width="1600" height="900" alt="" loading="lazy">
-        <!-- Texte 5 — La démonstration : mention sous l'image -->
-        <figcaption>Démonstration vidéo — bientôt disponible.</figcaption>
+        <!-- Vidéo IMG-7 — boucle de 13,6 s sans son (images/img-7-boucle.webm puis .mp4), affiche images/img-7-affiche.webp. Lecture automatique par assets/js/demo.js, sauf si le visiteur préfère un mouvement réduit ; commandes du lecteur toujours visibles (pause). -->
+        <video class="media demo__video" width="1920" height="658" muted loop playsinline controls preload="none" poster="/images/img-7-affiche.webp" aria-describedby="demo-libelle">
+          <source src="/images/img-7-boucle.webm" type="video/webm">
+          <source src="/images/img-7-boucle.mp4" type="video/mp4">
+        </video>
+        <!-- Texte 5 — La démonstration : libellé de la vidéo (textes V1.26) -->
+        <figcaption id="demo-libelle">Démonstration : l’AESH tape une consigne dans le document ; elle apparaît en direct sur l’écran de l’élève.</figcaption>
       </figure>
     </div>
   </section>
@@ -219,9 +229,8 @@
           <li><strong>La famille suit.</strong> Le journal de bord réunit ce que l’AESH a noté et ce qui a été classé, renommé ou mis à la corbeille pendant les sessions ; l’élève voit quels AESH se sont connectés à son espace, et quand pour la dernière fois.</li>
         </ul>
         <div>
-          <!-- Image IMG-6 — RETIRÉE tant que la capture n’est pas livrée (jamais de cadre vide, GO CEO 19/10). À la livraison, rétablir :
-          <img class="media" src="/images/img-6.webp" width="1600" height="400" alt="[alt à rédiger]" loading="lazy">
-          -->
+          <!-- Image IMG-6 — bandeau de session (images/img-6-bandeau.avif et .webp, 1920 × 100), monde démo, non retouché ; alt : textes V1.26 -->
+          <picture><source srcset="/images/img-6-bandeau.avif" type="image/avif"><img class="media bandeau" src="/images/img-6-bandeau.webp" width="1920" height="100" alt="Capture de l’application Doclia : le bandeau de session de l’élève indique le nom de l’AESH connecté, le temps restant et un bouton pour terminer la session." loading="lazy"></picture>
           <!-- Texte 7 — Encadré données (COS) -->
           <p class="callout">Les documents et les données de votre enfant sont conservés en France. Les services que nous ne faisons pas nous-mêmes sont encadrés par contrat, conformément au RGPD. Nous ne vendons ni ne cédons jamais vos données, et nous n’utilisons aucun cookie ni traceur publicitaire, ni sur le site ni dans l’application. Le détail figurera dans la politique de confidentialité de l’application, publiée avant son ouverture.</p>
         </div>

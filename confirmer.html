@@ -26,6 +26,7 @@
     <nav class="site-nav" aria-label="Navigation principale">
       <ul class="site-nav__list">
         <li><a href="/#comment-ca-marche">Comment ça marche</a></li>
+        <li><a href="/#demonstration">La démonstration</a></li>
         <li><a href="/#pour-qui">Pour qui</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
         <li><a href="/#notre-histoire">Notre histoire</a></li>
@@ -36,6 +37,7 @@
         <summary class="menu__toggle"><svg class="menu__icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu__icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Menu</span></summary>
         <ul class="menu__panel">
         <li><a href="/#comment-ca-marche">Comment ça marche</a></li>
+        <li><a href="/#demonstration">La démonstration</a></li>
         <li><a href="/#pour-qui">Pour qui</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
         <li><a href="/#notre-histoire">Notre histoire</a></li>
@@ -52,14 +54,14 @@
 <main id="contenu" tabindex="-1">
   <section class="page-intro">
     <div class="container">
-      <!-- Page /confirmer — titre, texte et bouton (textes proposés par le CTO le 19/10, à valider par le CMO) -->
+      <!-- Page /confirmer — titre, phrase, bouton et message sans JavaScript (textes V1.25) -->
       <h1>Confirmer mon inscription</h1>
-      <p><mark class="marqueur">[EN ATTENTE — CMO : textes de la page /confirmer (titre, bouton, message sans JavaScript), proposés par le CTO le 19/10]</mark></p>
+      <p>Un dernier clic pour rejoindre la liste d’attente de Doclia.</p>
       <form method="post" action="https://rmrereijbpixjfzuozxq.supabase.co/functions/v1/waitlist?action=confirm" enctype="application/x-www-form-urlencoded">
         <input type="hidden" name="t" id="jeton" value="">
         <button class="btn btn--lg" type="submit">Je confirme mon inscription</button>
       </form>
-      <noscript><p class="note">Activez JavaScript puis rouvrez le lien de l’e-mail.</p></noscript>
+      <noscript><p class="note">Pour confirmer, activez JavaScript dans votre navigateur, puis rouvrez le lien reçu par e-mail.</p></noscript>
     </div>
   </section>
 </main>
