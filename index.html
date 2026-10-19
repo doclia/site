@@ -304,8 +304,8 @@
       <h2 id="liste-attente-titre">Rejoignez la liste d’attente</h2>
       <!-- Texte 10 — Liste d'attente : texte -->
       <p class="lead">Doclia ouvre progressivement. Inscrivez-vous : vous serez prévenu en premier, et invité à l’essayer. Votre adresse ne sert qu’à cela.</p>
-      <!-- Formulaire — non branché avant S3 (l'adresse de la fonction waitlist sera posée dans action) -->
-      <form class="form" method="post">
+      <!-- Formulaire — branché sur la fonction waitlist (S3, contrat CTO du 19/10 19:44) ; envoi accepté seulement depuis https://doclia-site.vercel.app jusqu’à S6 -->
+      <form class="form" method="post" action="https://rmrereijbpixjfzuozxq.supabase.co/functions/v1/waitlist" enctype="application/x-www-form-urlencoded">
         <!-- Texte 10 — Formulaire : ligne en tête (champs obligatoires) -->
         <p class="form__required">Tous les champs sont obligatoires, sauf la case « plusieurs enfants ».</p>
         <div class="field">
@@ -328,14 +328,14 @@
         </fieldset>
         <div class="field field--check">
           <!-- Texte 10 — Formulaire : case plusieurs enfants -->
-          <label class="choice"><input type="checkbox" name="multiple_children" value="true"> Je suis intéressé par une offre pour plusieurs enfants</label>
+          <label class="choice"><input type="checkbox" name="multiple_children" value="on"> Je suis intéressé par une offre pour plusieurs enfants</label>
         </div>
         <div class="field field--check">
           <!-- Texte 10 — Formulaire : case d'accord (jamais pré-cochée) -->
-          <label class="choice"><input type="checkbox" name="consent" value="true" required> <span>J’accepte de recevoir les informations sur l’ouverture de Doclia (voir la <a href="/confidentialite">politique de confidentialité</a>)</span></label>
+          <label class="choice"><input type="checkbox" name="consent" value="on" required> <span>J’accepte de recevoir les informations sur l’ouverture de Doclia (voir la <a href="/confidentialite">politique de confidentialité</a>)</span></label>
         </div>
         <input type="hidden" name="locale" value="fr-FR">
-        <input type="hidden" name="consent_version" value="">
+        <input type="hidden" name="consent_version" value="fr-FR-2026-10-14">
         <div class="trap" aria-hidden="true">
           <input type="text" name="website" tabindex="-1" autocomplete="off">
         </div>
