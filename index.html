@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="/assets/css/site.css">
   <script src="/assets/js/menu.js" defer></script>
   <script src="/assets/js/demo.js" defer></script>
+  <script src="/assets/js/zoom.js" defer></script>
   <!-- Mesure d’audience : Vercel Web Analytics, sans cookie, servi par le même domaine (décision CEO 18/10 18:48 ; brief §2.4) -->
   <script src="/_vercel/insights/script.js" defer></script>
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
@@ -110,8 +111,8 @@
           <div class="step__media">
     <!-- Image IMG-2 — fichier images/img-2.webp (1536 × 1024) -->
             <picture><source srcset="/images/img-2.avif" type="image/avif"><img class="media" src="/images/img-2.webp" width="1200" height="800" alt="Un élève photographie une feuille de cours avec son téléphone." loading="lazy"></picture>
-            <!-- Capture réelle 4.1 — fichiers images/capture-4-1.avif et .webp (1200 × 634), recadrée sur la liste des classeurs (verdict CMO 19/10 22:38), monde démo, non retouchée ; alt : textes V1.25 -->
-            <picture class="step__capture"><source srcset="/images/capture-4-1.avif" type="image/avif"><img class="media" src="/images/capture-4-1.webp" width="1200" height="634" alt="Capture de l’application Doclia : la page « Mes classeurs » d’un élève, avec ses classeurs rangés par matière (français, mathématiques, SVT)." loading="lazy"></picture>
+            <!-- Capture réelle 4.1 — fichiers images/capture-4-1.avif et .webp (1200 × 634) ; vue agrandie images/capture-4-1-grand.webp (1760 × 930), ouverte par assets/js/zoom.js (sans script : le lien ouvre l’image), recadrée sur la liste des classeurs (verdict CMO 19/10 22:38), monde démo, non retouchée ; alt : textes V1.25 -->
+            <a class="zoom" href="/images/capture-4-1-grand.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/capture-4-1.avif" type="image/avif"><img class="media" src="/images/capture-4-1.webp" width="1200" height="634" alt="Capture de l’application Doclia : la page « Mes classeurs » d’un élève, avec ses classeurs rangés par matière (français, mathématiques, SVT)." loading="lazy"></picture></a>
           </div>
           <div class="step__body">
             <!-- Texte 4.1 — L'élève a son classeur : titre -->
@@ -124,9 +125,8 @@
           <div class="step__media">
     <!-- Image IMG-3 — fichier images/img-3.webp (1536 × 1024) -->
             <picture><source srcset="/images/img-3.avif" type="image/avif"><img class="media" src="/images/img-3.webp" width="1200" height="800" alt="Un élève chez lui et son AESH dans un autre lieu travaillent sur le même document, au même moment." loading="lazy"></picture>
-            <!-- Capture réelle 4.2 (document photographié devenu modifiable, monde démo, non retouchée) — emplacement prêt, affiché seulement quand le CTO la livre (GO CEO 19/10). À la livraison :
-            <picture class="step__capture"><source srcset="/images/capture-4-2.avif" type="image/avif"><img class="media" src="/images/capture-4-2.webp" width="1200" height="800" alt="[alt à rédiger]" loading="lazy"></picture>
-            -->
+            <!-- Capture réelle 4.2 — fichiers images/capture-4-2.avif et .webp (1120 × 1350), recadrée sur le bloc central, du bandeau d’avertissement au bouton « Créer le document » (verdict CMO 20/10 00:12), feuille de cours fictive, monde démo, non retouchée ; alt : textes V1.29 ; vue agrandie : le même fichier, ouvert par assets/js/zoom.js -->
+            <a class="zoom" href="/images/capture-4-2.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/capture-4-2.avif" type="image/avif"><img class="media" src="/images/capture-4-2.webp" width="1120" height="1350" alt="Capture de l’application Doclia : le texte extrait d’une photo de cours de mathématiques, avec l’avertissement de relecture, prêt à être classé dans le classeur de mathématiques." loading="lazy"></picture></a>
           </div>
           <div class="step__body">
             <!-- Texte 4.2 — L'AESH travaille avec lui, en direct : titre -->
@@ -162,8 +162,8 @@
       <!-- Texte 5 — La démonstration : texte -->
       <p class="lead">À gauche, l’écran de l’AESH. À droite, celui de l’élève. Ce que vous voyez est l’application telle qu’elle fonctionne, pas une maquette.</p>
       <figure class="demo">
-        <!-- Vidéo IMG-7 — boucle de 13,6 s sans son (images/img-7-boucle.webm puis .mp4), affiche images/img-7-affiche.webp. Lecture automatique par assets/js/demo.js, sauf si le visiteur préfère un mouvement réduit ; commandes du lecteur toujours visibles (pause). -->
-        <video class="media demo__video" width="1920" height="658" muted loop playsinline controls preload="none" poster="/images/img-7-affiche.webp" aria-describedby="demo-libelle">
+        <!-- Vidéo IMG-7 — boucle de 10,9 s sans son, refaite le 20/10 (« Écran AESH » / « Écran élève », zoom sur la saisie) (images/img-7-boucle.webm puis .mp4), affiche images/img-7-affiche.webp (img-7-boucle-poster, textes V1.29 ; l’attribut poster n’accepte qu’un fichier : WebP, lu partout). Lecture automatique par assets/js/demo.js, sauf si le visiteur préfère un mouvement réduit ; commandes du lecteur toujours visibles (pause). -->
+        <video class="media demo__video" width="1924" height="722" muted loop playsinline controls preload="none" poster="/images/img-7-affiche.webp" aria-describedby="demo-libelle">
           <source src="/images/img-7-boucle.webm" type="video/webm">
           <source src="/images/img-7-boucle.mp4" type="video/mp4">
         </video>
@@ -229,7 +229,7 @@
           <li><strong>La famille suit.</strong> Le journal de bord réunit ce que l’AESH a noté et ce qui a été classé, renommé ou mis à la corbeille pendant les sessions ; l’élève voit quels AESH se sont connectés à son espace, et quand pour la dernière fois.</li>
         </ul>
         <!-- Image IMG-6 — bandeau de session (images/img-6-bandeau.avif et .webp, 1920 × 100), monde démo, non retouché ; alt : textes V1.26. Affiché dès 768 px, en pleine largeur sous les quatre points ; masqué sur téléphone, où il serait illisible (verdict CMO 19/10 22:38) -->
-        <picture class="split__bandeau"><source srcset="/images/img-6-bandeau.avif" type="image/avif"><img class="media bandeau" src="/images/img-6-bandeau.webp" width="1920" height="68" alt="Capture de l’application Doclia : le bandeau de session de l’élève indique le nom de l’AESH connecté, le temps restant et un bouton pour terminer la session." loading="lazy"></picture>
+        <a class="zoom zoom--bandeau split__bandeau" href="/images/img-6-bandeau-grand.webp"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/img-6-bandeau.avif" type="image/avif"><img class="media bandeau" src="/images/img-6-bandeau.webp" width="1920" height="68" alt="Capture de l’application Doclia : le bandeau de session de l’élève indique le nom de l’AESH connecté, le temps restant et un bouton pour terminer la session." loading="lazy"></picture></a>
         <!-- Texte 7 — Encadré données (COS) -->
         <p class="callout">Les documents et les données de votre enfant sont conservés en France. Les services que nous ne faisons pas nous-mêmes sont encadrés par contrat, conformément au RGPD. Nous ne vendons ni ne cédons jamais vos données, et nous n’utilisons aucun cookie ni traceur publicitaire, ni sur le site ni dans l’application. Le détail figurera dans la politique de confidentialité de l’application, publiée avant son ouverture.</p>
       </div>

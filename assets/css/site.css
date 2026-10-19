@@ -773,12 +773,12 @@ main:focus {
 }
 
 /* Bandeau IMG-6 : absent sur téléphone (illisible), pleine largeur dès 768 px */
-.split__bandeau {
+.split .split__bandeau {
   display: none;
 }
 
 @media (min-width: 48rem) {
-  .split__bandeau {
+  .split .split__bandeau {
     display: block;
   }
 }
@@ -1134,4 +1134,119 @@ main:focus {
 /* Case « plusieurs enfants » : affichée seulement si le profil « Parent » est coché (sans script ; navigateur sans :has() : case visible, sans effet) */
 form:not(:has(input[name="profile"][value="parent"]:checked)) .champ-plusieurs-enfants {
   display: none;
+}
+
+/* Captures agrandissables : lien vers l'image en grand, ouverte en fenêtre modale par assets/js/zoom.js */
+.zoom {
+  display: block;
+  position: relative;
+  cursor: zoom-in;
+  border-radius: var(--radius-xl);
+}
+
+/* Pastille loupe (décorative) à cheval sur le coin haut droit, hors du contenu de la capture ; pas sur le bandeau, trop bas */
+.zoom:not(.zoom--bandeau)::after {
+  content: "";
+  position: absolute;
+  top: -0.875rem;
+  right: -0.875rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  border-radius: 50%;
+  background: var(--color-primary) url("/assets/img/loupe.svg") center / 1.125rem no-repeat;
+  box-shadow: var(--shadow-sm);
+  pointer-events: none;
+}
+
+.zoom:hover::after {
+  background-color: var(--color-primary-hover);
+}
+
+.zoom--bandeau {
+  border-radius: var(--radius-md);
+}
+
+.zoom-dialog {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.zoom-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.zoom-dialog::backdrop {
+  background: rgba(30, 49, 61, 0.88);
+}
+
+html:has(.zoom-dialog[open]) {
+  overflow: hidden;
+}
+
+.zoom-dialog__fermer {
+  align-self: flex-end;
+  flex: none;
+  min-height: 2.75rem;
+  margin: 1rem;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-primary);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.zoom-dialog__fermer:hover {
+  background: var(--color-bg-soft);
+}
+
+.zoom-dialog__cadre {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  overflow: auto;
+  padding: 0 1rem 1rem;
+}
+
+/* Les marges automatiques centrent l'image et retombent à 0 si elle déborde : rien n'est rogné */
+.zoom-dialog__cadre img {
+  margin: auto;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  cursor: auto;
+}
+
+/* Téléphone : l'image s'affiche plus grande que l'écran, on la parcourt du doigt */
+@media (max-width: 47.99rem) {
+  .zoom-dialog__cadre img {
+    width: 36rem;
+    max-width: none;
+    max-height: none;
+  }
+}
+
+/* Bandeau IMG-6 : affiché à sa taille réelle dans l'application (1440 px), parcouru horizontalement sur tablette */
+.zoom-dialog--bandeau .zoom-dialog__cadre img {
+  width: 90rem;
+  max-width: none;
+  max-height: none;
+}
+
+@media (min-width: 64rem) {
+  .zoom-dialog--bandeau .zoom-dialog__cadre img {
+    width: min(90rem, 100%);
+  }
 }
