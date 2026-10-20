@@ -59,7 +59,8 @@
       <h1>Doclia pour les établissements, les PIAL et les académies</h1>
       <!-- Page Établissements — accroche -->
       <p class="lead">Un même outil pour tous les binômes élève–AESH de votre établissement. Aucune liste à tenir, aucun compte à créer à la place d’un élève, aucune charge nouvelle pour vos équipes.</p>
-      <p><a class="btn btn--lg" href="mailto:contact@doclia.fr">Prendre contact</a></p>
+      <!-- Page Établissements — accroche : bouton, mène au bloc de contact (refonte du 21/10) -->
+      <p><a class="btn btn--lg" href="#contact">Prendre contact</a></p>
     </div>
   </section>
 
@@ -127,8 +128,57 @@
       <p>pour 8 élèves équipés avec leur AESH</p>
       <p>Ce prix comprend ce qu’un abonnement famille ne donne pas : les licences de tous vos binômes, sans liste à tenir ni compte à créer ; l’activation suivie et des indicateurs agrégés ; une seule facture pour l’établissement.</p>
       <p>Grille complète sur demande. TVA non applicable, article 293 B du CGI.</p>
-      <!-- Page Établissements — Contact : bouton -->
-      <p><a class="btn btn--lg" href="mailto:contact@doclia.fr">Prendre contact</a></p>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT (refonte, GO CEO 21/10 00:34 ; textes V1.39 à V1.42) ==================== -->
+  <section class="section section--alt contact" id="contact" aria-labelledby="etab-contact-titre">
+    <div class="container narrow">
+      <!-- Page Établissements — Contact : titre (textes V1.39) -->
+      <h2 id="etab-contact-titre">Parlons de votre établissement</h2>
+      <!-- Page Établissements — Contact : phrase (textes V1.39) -->
+      <p>Une question, un projet, une démonstration ? Choisissez ce qui vous arrange.</p>
+      <!-- Formulaire « Être rappelé » (textes V1.39 à V1.42) — PRÊT, MASQUÉ jusqu’à la livraison de sa fonction serveur par CTO-Debug10 (vers le 23/10 ; verdict CMO 21/10 01:26 : pas de bouton mort, pas de cadre vide).
+           À la livraison : renseigner action (URL de la fonction) et l’ajouter à form-action dans vercel.json ; page de confirmation avec « Merci. Nous vous rappelons au créneau choisi, dans les deux jours ouvrés. » ; essais ; puis retirer ce commentaire.
+           Sans script : le volet s’ouvre (details) et le formulaire s’envoie normalement.
+      <details class="rappel">
+        <summary class="btn btn--lg">Être rappelé</summary>
+        <form class="form" method="post" action="[URL de la fonction serveur]" enctype="application/x-www-form-urlencoded">
+          <div class="field"><label for="r-nom">Nom</label><input id="r-nom" type="text" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="r-fonction">Fonction</label>
+            <select id="r-fonction" name="role" required>
+              <option value="">—</option>
+              <option value="head">Chef d’établissement</option>
+              <option value="deputy">Adjoint</option>
+              <option value="pial">Pilote de PIAL</option>
+              <option value="referent">Enseignant référent</option>
+              <option value="other">Autre</option>
+            </select></div>
+          <div class="field"><label for="r-etab">Établissement et ville</label><input id="r-etab" type="text" name="school" autocomplete="organization" required></div>
+          <div class="field"><label for="r-courriel">Courriel professionnel</label><input id="r-courriel" type="email" name="email" autocomplete="email" required></div>
+          <div class="field"><label for="r-tel">Téléphone</label><input id="r-tel" type="tel" name="phone" autocomplete="tel" required></div>
+          <fieldset class="field"><legend>Créneau préféré</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="slot" value="morning" required> Matin</label>
+              <label class="choice"><input type="radio" name="slot" value="noon"> Midi</label>
+              <label class="choice"><input type="radio" name="slot" value="evening"> Fin de journée</label>
+            </div></fieldset>
+          <div class="field"><label for="r-eleves">Nombre approximatif d’élèves accompagnés (facultatif)</label><input id="r-eleves" type="number" name="students" min="1" inputmode="numeric"></div>
+          <div class="field"><label for="r-message">Message (facultatif)</label><textarea id="r-message" name="message" rows="4" aria-describedby="r-message-aide"></textarea>
+            <p class="hint" id="r-message-aide">Ne donnez aucune information sur un élève dans votre message.</p></div>
+          <div class="trap" aria-hidden="true"><label for="r-site">Site web</label><input id="r-site" type="text" name="website" tabindex="-1" autocomplete="off"></div>
+          <button class="btn" type="submit">Envoyer ma demande</button>
+          <p class="legal-note">Vos coordonnées servent uniquement à vous rappeler au sujet de Doclia pour votre établissement. DOCLIA SASU les reçoit par courriel et les conserve au plus 3 ans après votre dernier contact. Vous pouvez demander leur suppression à tout moment : <a href="mailto:privacy@doclia.fr">privacy@doclia.fr</a>. Plus d’informations : <a href="/confidentialite">politique de confidentialité</a></p>
+        </form>
+      </details>
+      FIN DU FORMULAIRE MASQUÉ -->
+      <ul class="contact__voies">
+        <!-- Page Établissements — Contact : téléphone (textes V1.39, formulation du CEO 21/10 00:34 ; numéro provisoire, comme sur /mentions-legales) -->
+        <li>Nous appeler : <a href="tel:+33638051015">06 38 05 10 15</a></li>
+        <!-- Page Établissements — Contact : courriel (textes V1.39) -->
+        <li>Écrire : <a href="mailto:contact@doclia.fr">contact@doclia.fr</a></li>
+        <!-- « Télécharger la présentation (PDF, 1 page) » : CONDITIONNEL, affiché quand le kit établissement régénéré est validé par le CEO (textes V1.39) -->
+      </ul>
     </div>
   </section>
 </main>
