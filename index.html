@@ -82,7 +82,7 @@
   </section>
 
   <!-- ==================== BANDE SOUS LE HÉROS : aperçu de l’application (textes V1.30) ==================== -->
-  <!-- Écrans de téléphone réels (CTO-Debug10 20/10, 390 × 844 ×2, monde démo, non retouchés, verdicts CMO 01:18 et 01:28). Deux écrans tant que « Retrouver » (tel-c-classeurs) n’est pas reprise ; centrés ; jamais de cadre vide. -->
+  <!-- Écrans de téléphone réels (CTO-Debug10 20/10, 390 × 844 ×2, monde démo, non retouchés, verdicts CMO 01:18 et 01:28). Deux écrans, définitivement (pas de vue des classeurs sur téléphone, textes V1.33) ; centrés ; jamais de cadre vide. -->
   <div class="apercu">
     <div class="container">
       <!-- Texte 4 — Preuves visuelles : bande sous le héros, surtitre -->
@@ -102,7 +102,6 @@
               <figcaption>Lire et modifier</figcaption>
             </figure>
           </li>
-          <!-- Écran « Retrouver » (tel-c-classeurs), à la reprise de la capture après correctif mobile de l’application — alt : « Capture de l’application Doclia sur téléphone : les classeurs de l’élève, rangés par matière. » -->
       </ul>
     </div>
   </div>
@@ -137,8 +136,8 @@
           <div class="step__media">
     <!-- Image IMG-2 — fichier images/img-2.webp (1536 × 1024) -->
             <picture><source srcset="/images/img-2.avif" type="image/avif"><img class="media" src="/images/img-2.webp" width="1200" height="800" alt="Un élève photographie une feuille de cours avec son téléphone." loading="lazy"></picture>
-            <!-- Capture réelle 4.1 — fichiers images/capture-4-1.avif et .webp (1200 × 634) ; vue agrandie images/capture-4-1-grand.webp (1760 × 930), ouverte par assets/js/zoom.js (sans script : le lien ouvre l’image), recadrée sur la liste des classeurs (verdict CMO 19/10 22:38), monde démo, non retouchée ; alt : textes V1.25 -->
-            <a class="zoom" href="/images/capture-4-1-grand.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/capture-4-1.avif" type="image/avif"><img class="media" src="/images/capture-4-1.webp" width="1200" height="634" alt="Capture de l’application Doclia : la page « Mes classeurs » d’un élève, avec ses classeurs rangés par matière (français, mathématiques, SVT)." loading="lazy"></picture></a>
+            <!-- Capture réelle 4.1 — fichiers images/capture-4-1.avif et .webp (1200 × 948), refaite le 20/10 (CTO-Debug10 21:39, classeurs remplis, verdict CMO 21/10 00:00), recadrée sur la liste des classeurs sans l’en-tête de l’application, monde démo, non retouchée ; alt : textes V1.33 ; vue agrandie images/capture-4-1-grand.webp (1760 × 1390), ouverte par assets/js/zoom.js (sans script : le lien ouvre l’image) -->
+            <a class="zoom" href="/images/capture-4-1-grand.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/capture-4-1.avif" type="image/avif"><img class="media" src="/images/capture-4-1.webp" width="1200" height="948" alt="Capture de l’application Doclia : la page « Mes classeurs » d’un élève, avec des classeurs bien remplis, rangés par matière, dont deux en français." loading="lazy"></picture></a>
           </div>
           <div class="step__body">
             <!-- Texte 4.1 — L'élève a son classeur : titre -->
@@ -254,7 +253,22 @@
           <!-- Texte 7 — point 4 -->
           <li><strong>La famille suit.</strong> Le journal de bord réunit ce que l’AESH a noté et ce qui a été classé, renommé ou mis à la corbeille pendant les sessions ; l’élève voit quels AESH se sont connectés à son espace, et quand pour la dernière fois.</li>
         </ul>
-        <!-- Image IMG-6 — bandeau de session (images/img-6-bandeau.avif et .webp, 1920 × 100), monde démo, non retouché ; alt : textes V1.26. Affiché dès 768 px, en pleine largeur sous les quatre points ; masqué sur téléphone, où il serait illisible (verdict CMO 19/10 22:38) -->
+        <!-- Captures réelles des tableaux de bord (CTO-Debug10 20/10, monde démo, non retouchées ; verdict CMO 21/10 00:00, textes V1.35) : élève sur ordinateur (dash-eleve, coupé en bas sous « Journal de bord · Fiche de passation ») et AESH sur téléphone (dash-aesh). Dès 768 px côte à côte à la même hauteur, sinon l’élève d’abord. -->
+        <div class="paire">
+          <div class="paire__items">
+            <figure class="paire__item paire__item--ordi">
+              <a class="zoom" href="/images/dash-eleve-grand.webp"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/dash-eleve.avif" type="image/avif"><img src="/images/dash-eleve.webp" width="1600" height="839" alt="Capture de l’application Doclia sur ordinateur : le tableau de bord de l’élève, avec ses accès (nouveau document, scan, documents, classeurs, reformulation, agenda) et le bouton « Mon QR code AESH »." loading="lazy"></picture></a>
+              <!-- Texte 7 — Tableaux de bord : légende 1 (textes V1.35) -->
+              <figcaption>Côté élève : son QR code, qu’il montre à son AESH</figcaption>
+            </figure>
+            <figure class="paire__item paire__item--tel">
+              <a class="zoom zoom--tel" href="/images/dash-aesh-grand.webp" data-zoom="tel"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/dash-aesh.avif" type="image/avif"><img src="/images/dash-aesh.webp" width="560" height="1212" alt="Capture de l’application Doclia sur téléphone : l’accueil de l’AESH, qui ne voit aucun élève tant que l’élève ne lui a pas montré son QR code ou donné son code." loading="lazy"></picture></a>
+              <!-- Texte 7 — Tableaux de bord : légende 2 (textes V1.35) -->
+              <figcaption>Côté AESH : sans ce code, aucun élève</figcaption>
+            </figure>
+          </div>
+        </div>
+        <!-- Image IMG-6 — bandeau de session (images/img-6-bandeau.avif et .webp, 1920 × 68), monde démo, non retouché ; alt : textes V1.26. Affiché dès 768 px, en pleine largeur sous les quatre points ; masqué sur téléphone, où il serait illisible (verdict CMO 19/10 22:38) -->
         <a class="zoom zoom--bandeau split__bandeau" href="/images/img-6-bandeau-grand.webp" data-zoom="bandeau"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/img-6-bandeau.avif" type="image/avif"><img class="media bandeau" src="/images/img-6-bandeau.webp" width="1920" height="68" alt="Capture de l’application Doclia : le bandeau de session de l’élève indique le nom de l’AESH connecté, le temps restant et un bouton pour terminer la session." loading="lazy"></picture></a>
         <!-- Texte 7 — Encadré données (COS) -->
         <p class="callout">Les documents et les données de votre enfant sont conservés en France. Les services que nous ne faisons pas nous-mêmes sont encadrés par contrat, conformément au RGPD. Nous ne vendons ni ne cédons jamais vos données, et nous n’utilisons aucun cookie ni traceur publicitaire, ni sur le site ni dans l’application. Le détail figurera dans la politique de confidentialité de l’application, publiée avant son ouverture.</p>

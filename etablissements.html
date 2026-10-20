@@ -9,6 +9,7 @@
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
   <script src="/assets/js/menu.js" defer></script>
+  <script src="/assets/js/zoom.js" defer></script>
   <!-- Mesure d’audience : Vercel Web Analytics, sans cookie, servi par le même domaine (décision CEO 18/10 18:48 ; brief §2.4) -->
   <script src="/_vercel/insights/script.js" defer></script>
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
@@ -74,6 +75,15 @@
         <!-- Page Établissements — point 3 (textes V1.25) -->
         <li><strong>Équiper, jamais surveiller.</strong> Vous suivez l’activation de vos licences et des indicateurs agrégés. Vous ne lisez jamais les documents, les cours ni le journal des élèves.</li>
       </ul>
+      <!-- Captures réelles des tableaux de bord, reprises de la page d’accueil (mêmes fichiers, mêmes alt ; verdict CMO 21/10 00:02, textes V1.36) : preuve de « Équiper, jamais surveiller » -->
+      <figure class="paire">
+        <div class="paire__items">
+          <div class="paire__item paire__item--ordi"><a class="zoom" href="/images/dash-eleve-grand.webp"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/dash-eleve.avif" type="image/avif"><img src="/images/dash-eleve.webp" width="1600" height="839" alt="Capture de l’application Doclia sur ordinateur : le tableau de bord de l’élève, avec ses accès (nouveau document, scan, documents, classeurs, reformulation, agenda) et le bouton « Mon QR code AESH »." loading="lazy"></picture></a></div>
+          <div class="paire__item paire__item--tel"><a class="zoom zoom--tel" href="/images/dash-aesh-grand.webp" data-zoom="tel"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/dash-aesh.avif" type="image/avif"><img src="/images/dash-aesh.webp" width="560" height="1212" alt="Capture de l’application Doclia sur téléphone : l’accueil de l’AESH, qui ne voit aucun élève tant que l’élève ne lui a pas montré son QR code ou donné son code." loading="lazy"></picture></a></div>
+        </div>
+        <!-- Page Établissements — légende commune des tableaux de bord (textes V1.36) -->
+        <figcaption class="paire__legende">Sans le code de l’élève, l’AESH ne voit aucun élève. Personne d’autre non plus.</figcaption>
+      </figure>
     </div>
   </section>
 

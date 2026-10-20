@@ -794,6 +794,7 @@ main:focus {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "points callout"
+      "paire paire"
       "bandeau bandeau";
     gap: 2rem 3rem;
     align-items: start;
@@ -801,6 +802,7 @@ main:focus {
 
   .split > .points { grid-area: points; }
   .split > .split__bandeau { grid-area: bandeau; }
+  .split > .paire { grid-area: paire; }
   .split > .callout { grid-area: callout; }
 }
 
@@ -1323,4 +1325,76 @@ html:has(.zoom-dialog[open]) {
   .apercu__ecran {
     flex-basis: 16rem;
   }
+}
+
+/* Paire de tableaux de bord (élève sur ordinateur, AESH sur téléphone) : même hauteur dès 768 px.
+   Chaque capture prend une largeur proportionnelle à son format (1600 / 839 et 560 / 1212) : les hauteurs s'égalisent. */
+.paire {
+  margin: 0;
+}
+
+.paire__items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.paire__item {
+  margin: 0;
+  width: 100%;
+}
+
+.paire__item--tel {
+  max-width: 15rem;
+}
+
+.paire__item img {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+  background: var(--color-bg-alt);
+}
+
+.paire__item .zoom {
+  border-radius: 1rem;
+}
+
+.paire__item figcaption,
+.paire__legende {
+  padding-top: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.paire__legende {
+  max-width: none;
+  margin-top: 0.75rem;
+  padding-top: 0;
+}
+
+@media (min-width: 48rem) {
+  .paire__items {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .paire__item--ordi {
+    flex: 1.907 1 2px; /* 2 px : les bordures, hors proportion */
+    min-width: 0;
+  }
+
+  .paire__item--tel {
+    flex: 0.462 1 2px;
+    min-width: 0;
+    max-width: none;
+  }
+}
+
+/* Établissements : la paire sous la liste, avec un peu d'air */
+.narrow > .paire {
+  margin-top: 2.5rem;
 }
