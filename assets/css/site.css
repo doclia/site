@@ -270,7 +270,11 @@ p {
   gap: 0.375rem;
   min-height: var(--tap);
   padding: 0 0.625rem;
-  border: 1px solid var(--color-border-strong);
+  /* Même hauteur, rayon et bordure que « Je m'inscris » ; bordure de la couleur principale et même ombre,
+     pour qu'un contour clair ne paraisse pas plus petit qu'un bouton plein (CMO 21/10 13:17) */
+  border: 1px solid var(--color-primary);
+  box-shadow: var(--shadow-xs);
+  line-height: 1.25rem;
   border-radius: var(--radius-md);
   color: var(--color-primary);
   font-size: 0.875rem;
@@ -1499,5 +1503,51 @@ html:has(.zoom-dialog[open]) {
   .grille th,
   .grille td {
     padding: 0.625rem;
+  }
+}
+
+/* Bouton secondaire (contour) */
+.btn--contour {
+  background: var(--color-bg);
+  color: var(--color-primary);
+}
+
+.btn--contour:hover {
+  background: var(--color-bg-soft);
+  border-color: var(--color-primary-hover);
+  color: var(--color-primary-hover);
+}
+
+.btn--contour:active {
+  background: var(--color-bg-soft);
+}
+
+/* Boutons de l'accroche côte à côte ; sur téléphone, le second passe sous le premier */
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Téléphone : les deux boutons l'un sous l'autre, sur toute la largeur */
+@media (max-width: 47.99rem) {
+  .hero__actions .btn {
+    flex: 1 1 100%;
+    padding: 0.375rem 1rem;
+  }
+}
+
+/* Accroche d'une page secondaire (Établissements) : marge basse ramenée à celle d'une section (CEO 21/10 13:12) */
+.hero--page {
+  padding-bottom: 3rem;
+}
+
+.hero--page .container > :last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 51.25rem) {
+  .hero--page {
+    padding-bottom: 4.5rem;
   }
 }
