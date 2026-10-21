@@ -376,8 +376,8 @@ html {
   }
 }
 
-/* Ligne de liens complète dès 1280 px (sept liens depuis l’ajout de « AESH », 21/10 ; six dès 1184 px auparavant) ; menu replié en dessous */
-@media (min-width: 80rem) {
+/* Ligne de liens complète dès 1088 px : plus petite largeur où les sept liens (« Fonctionnement », « Démo »…, textes V1.51) tiennent sur une ligne avec 16 px entre eux (mesuré le 21/10) ; menu replié en dessous */
+@media (min-width: 68rem) {
   .site-nav {
     margin: 0 auto;
   }
