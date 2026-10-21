@@ -1411,7 +1411,6 @@ html:has(.zoom-dialog[open]) {
 
 .contact__voies a {
   font-weight: 600;
-  white-space: nowrap;
 }
 
 /* Formulaire « Être rappelé » (masqué jusqu'à sa livraison) : volet sans script */
