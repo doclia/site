@@ -20,6 +20,7 @@
   <script src="/assets/js/menu.js" defer></script>
   <script src="/assets/js/demo.js" defer></script>
   <script src="/assets/js/zoom.js" defer></script>
+  <script src="/assets/js/profil.js" defer></script>
   <!-- Mesure d’audience : Vercel Web Analytics, sans cookie, servi par le même domaine (décision CEO 18/10 18:48 ; brief §2.4) -->
   <script src="/_vercel/insights/script.js" defer></script>
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
@@ -33,7 +34,7 @@
   <div class="container site-header__bar">
     <!-- Texte 1 — En-tête : logo (retour à l'accueil) -->
     <a class="site-header__logo" href="/"><img src="/assets/img/logo.svg" width="890" height="350" alt="Doclia — accueil"></a>
-    <!-- Texte 1 — En-tête : ancres. Les cinq liens figurent deux fois : liste pour ordinateur, puis menu replié pour mobile. Un changement se fait dans les deux. -->
+    <!-- Texte 1 — En-tête : ancres. Les sept liens figurent deux fois : liste pour ordinateur, puis menu replié pour mobile. Un changement se fait dans les deux. -->
     <nav class="site-nav" aria-label="Navigation principale">
       <ul class="site-nav__list">
         <li><a href="/#comment-ca-marche">Comment ça marche</a></li>
@@ -41,6 +42,7 @@
         <li><a href="/#pour-qui">Pour qui</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
         <li><a href="/#notre-histoire">Notre histoire</a></li>
+        <li><a href="/aesh">AESH</a></li>
         <li><a href="/etablissements">Établissements</a></li>
       </ul>
       <details class="menu">
@@ -52,6 +54,7 @@
         <li><a href="/#pour-qui">Pour qui</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
         <li><a href="/#notre-histoire">Notre histoire</a></li>
+        <li><a href="/aesh">AESH</a></li>
         <li><a href="/etablissements">Établissements</a></li>
         </ul>
       </details>
@@ -143,7 +146,7 @@
             <!-- Texte 4.1 — L'élève a son classeur : titre -->
             <h3>L’élève a son classeur</h3>
             <!-- Texte 4.1 — L'élève a son classeur : texte -->
-            <p>Chaque élève dispose de son propre espace, rangé par matière. Son téléphone est le scanner : il photographie le cours, la feuille, le tableau, et le document arrive dans son classeur — depuis n’importe quel téléphone équipé d’un appareil photo et connecté à Internet. Un cours photographié devient un document lisible et modifiable. Rien ne se perd, tout se retrouve.</p>
+            <p>Chaque élève dispose de son propre espace, rangé par matière. Son téléphone est le scanner : il photographie le cours, la feuille, le tableau, et le document arrive dans son classeur — depuis n’importe quel téléphone équipé d’un appareil photo et connecté à Internet. Un cours photographié devient un document lisible et modifiable. Rien ne se perd, tout se retrouve. Ses devoirs et ses contrôles sont dans son agenda : tout est noté au même endroit.</p>
           </div>
         </article>
         <article class="step">
@@ -220,7 +223,8 @@
         <article class="card">
           <img class="card__icon" src="/images/picto-aesh.svg" width="64" height="64" alt="">
           <!-- Texte 6 — Carte 3 : titre -->
-          <h3>L’AESH</h3>
+          <!-- Carte 3 : le titre renvoie vers la page AESH (textes V1.49) -->
+          <h3><a href="/aesh">L’AESH</a></h3>
           <!-- Texte 6 — Carte 3 : texte -->
           <p>Doclia est votre assistant. Il vous donne ce qui manque souvent au quotidien : un espace de travail avec l’élève, des documents adaptés en quelques gestes, un suivi qui ne se perd pas d’un jour à l’autre ni d’une année à l’autre. Pour vous, Doclia est gratuit et le restera : rien à payer, jamais, et aucune contrepartie — ni témoignage, ni promotion, ni recrutement. Vous accompagnez ; Doclia vous épaule.</p>
         </article>
@@ -289,7 +293,7 @@
           <p>Tout élève, du collège aux études supérieures</p>
           <!-- Texte 8 — Offre Élève : ce qui est inclus -->
           <p class="price__label">Ce qui est inclus</p>
-          <p>Le classeur par matière, les cours photographiés et rangés, les textes de cours adaptés</p>
+          <p>Le classeur par matière, les cours photographiés et rangés, les textes de cours adaptés, l’agenda des devoirs</p>
         </article>
         <article class="price price--main">
           <!-- Texte 8 — Offre Élève + AESH -->
