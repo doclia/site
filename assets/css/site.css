@@ -505,8 +505,14 @@ main:focus {
 /* Bloc normal (pas flex) : l'espace après « : » est conservé ; 12 + 24 + 12 = 48 px, la hauteur des pictogrammes */
 .site-footer__contact p {
   margin: 0;
-  padding: 0.75rem 0;
   line-height: 1.5rem;
+}
+
+/* Liens du contact et de l'idée : zone cliquable de 48 px de haut, comme les autres liens du pied de page */
+.site-footer__contact p a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
 }
 
 .site-footer__reseaux {
