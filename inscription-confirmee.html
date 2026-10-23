@@ -61,6 +61,39 @@
       <p>Nous vous écrirons dès l’ouverture de Doclia.</p>
     </div>
   </section>
+
+  <!-- Question facultative et anonyme sur les besoins (textes V1.54 ; contrat CTO-Debug11 accepté par le CTO, 23/10 03:10 ; fonction déployée à 03:16).
+       Envoi natif, sans script, vers waitlist?action=needs (origine déjà autorisée par form-action) ; réponse sans lien avec l’adresse ni l’inscription.
+       Succès → /reponse-enregistree ; aucune case cochée → retour ici (#question). -->
+  <section class="section section--alt" id="question" aria-labelledby="question-titre">
+    <div class="container narrow">
+      <!-- Page /inscription-confirmee — question : titre -->
+      <h2 id="question-titre">Une question pour nous aider (facultatif)</h2>
+      <form class="form" method="post" action="https://rmrereijbpixjfzuozxq.supabase.co/functions/v1/waitlist?action=needs" enctype="application/x-www-form-urlencoded">
+        <fieldset class="field" aria-describedby="question-aide">
+          <!-- Page /inscription-confirmee — question et aide -->
+          <legend>En classe, qu’est-ce qui est le plus difficile ?</legend>
+          <p class="hint" id="question-aide">Plusieurs réponses possibles. Vous êtes AESH ? Répondez pour les élèves que vous accompagnez.</p>
+          <div class="choices choices--colonne">
+              <label class="choice"><input type="checkbox" name="besoin" value="ecrire"> Écrire</label>
+              <label class="choice"><input type="checkbox" name="besoin" value="lire"> Lire</label>
+              <label class="choice"><input type="checkbox" name="besoin" value="consignes"> Comprendre les consignes</label>
+              <label class="choice"><input type="checkbox" name="besoin" value="organisation"> S’organiser (cartable, devoirs)</label>
+              <label class="choice"><input type="checkbox" name="besoin" value="concentration"> Rester concentré</label>
+              <label class="choice"><input type="checkbox" name="besoin" value="voir_entendre"> Voir ou entendre</label>
+              <label class="choice"><input type="checkbox" name="besoin" value="autre"> Autre</label>
+          </div>
+        </fieldset>
+        <!-- Piège à robots, comme sur le formulaire d’inscription -->
+        <div class="trap" aria-hidden="true">
+          <input type="text" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <!-- Page /inscription-confirmee — question : bouton et mention -->
+        <button class="btn btn--lg" type="submit">Envoyer ma réponse</button>
+        <p class="legal-note">Réponse anonyme, sans lien avec votre adresse ni avec votre inscription. Elle nous aide à choisir ce que nous améliorons en premier.</p>
+      </form>
+    </div>
+  </section>
 </main>
 
 <!-- PIED DE PAGE — identique sur toutes les pages (contrôlé par outils/verifier.py) -->

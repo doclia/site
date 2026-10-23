@@ -1626,3 +1626,17 @@ html:has(.zoom-dialog[open]) {
 .process + p {
   margin-top: 2rem;
 }
+
+/* Question anonyme sur les besoins : cases l'une sous l'autre */
+.choices--colonne {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.choices--colonne .choice {
+  padding: 0 1rem 0 0.75rem;
+}
+
+.field legend + .hint {
+  margin: 0 0 0.75rem;
+}
