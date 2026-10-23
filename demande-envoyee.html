@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merci. — Doclia</title>
+  <!-- Page de parcours : non indexée (textes V1.8) -->
+  <meta name="robots" content="noindex">
+  <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/menu.js" defer></script>
+  <!-- Mesure d’audience : Vercel Web Analytics, sans cookie, servi par le même domaine (décision CEO 18/10 18:48 ; brief §2.4) -->
+  <script src="/_vercel/insights/script.js" defer></script>
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/icons/favicon-192.png">
+</head>
+<body>
+<a class="skip-link" href="#contenu">Aller au contenu</a>
+<!-- EN-TÊTE — identique sur toutes les pages (contrôlé par outils/verifier.py) -->
+<header class="site-header">
+  <div class="container site-header__bar">
+    <!-- Texte 1 — En-tête : logo (retour à l'accueil) -->
+    <a class="site-header__logo" href="/"><img src="/assets/img/logo.svg" width="890" height="350" alt="Doclia — accueil"></a>
+    <!-- Texte 1 — En-tête : ancres. Les sept liens figurent deux fois : liste pour ordinateur, puis menu replié pour mobile. Un changement se fait dans les deux. -->
+    <nav class="site-nav" aria-label="Navigation principale">
+      <ul class="site-nav__list">
+        <li><a href="/#comment-ca-marche">Fonctionnement</a></li>
+        <li><a href="/#demonstration">Démo</a></li>
+        <li><a href="/#pour-qui">Pour qui</a></li>
+        <li><a href="/#tarifs">Tarifs</a></li>
+        <li><a href="/#notre-histoire">Notre histoire</a></li>
+        <li><a href="/aesh">AESH</a></li>
+        <li><a href="/etablissements">Établissements</a></li>
+      </ul>
+      <details class="menu">
+        <!-- Texte d'interface — bouton du menu replié (mobile) -->
+        <summary class="menu__toggle"><svg class="menu__icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu__icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Menu</span></summary>
+        <ul class="menu__panel">
+        <li><a href="/#comment-ca-marche">Fonctionnement</a></li>
+        <li><a href="/#demonstration">Démo</a></li>
+        <li><a href="/#pour-qui">Pour qui</a></li>
+        <li><a href="/#tarifs">Tarifs</a></li>
+        <li><a href="/#notre-histoire">Notre histoire</a></li>
+        <li><a href="/aesh">AESH</a></li>
+        <li><a href="/etablissements">Établissements</a></li>
+        </ul>
+      </details>
+    </nav>
+    <!-- Texte 1 — En-tête : bouton principal (mobile : « Je m'inscris » ; ordinateur : libellé complet) -->
+    <div class="site-header__cta"><a class="btn" href="/#liste-attente"><span class="cta-short">Je m’inscris</span><span class="cta-long">Rejoindre la liste d’attente</span></a></div>
+  </div>
+</header>
+<!-- FIN EN-TÊTE -->
+
+<main id="contenu" tabindex="-1">
+  <section class="page-intro">
+    <div class="container">
+      <!-- Page /demande-envoyee — après « Être rappelé » (texte V1.39, délai confirmé par le CEO le 21/10 00:39) -->
+      <h1>Merci.</h1>
+      <p>Nous vous rappelons au créneau choisi, dans les deux jours ouvrés.</p>
+    </div>
+  </section>
+</main>
+
+<!-- PIED DE PAGE — identique sur toutes les pages (contrôlé par outils/verifier.py) -->
+<footer class="site-footer">
+  <div class="container">
+    <!-- Texte 12 — Pied de page : baseline -->
+    <p class="site-footer__baseline">Doclia — L’école sans les barrières</p>
+    <!-- Texte 12 — Pied de page : liens -->
+    <ul class="site-footer__links">
+      <li><a href="/mentions-legales">Mentions légales</a></li>
+      <li><a href="/confidentialite">Politique de confidentialité</a></li>
+      <li><a href="/aesh">AESH</a></li>
+      <li><a href="/etablissements">Établissements</a></li>
+    </ul>
+    <!-- Texte 12 — Pied de page : contact et réseaux. Réseaux en pictogrammes (textes V1.53, CMO 22/10 05:50) : logos officiels monochromes, tracés de Simple Icons (CC0 ; Facebook de la version 16.35.0, LinkedIn de la version 13.21.0, dernière à l’inclure), en SVG dans la page ; rien n’est chargé depuis ces réseaux. -->
+    <div class="site-footer__contact">
+    <p>Contact : <a href="mailto:contact@doclia.fr">contact@doclia.fr</a></p>
+    <!-- Texte 12 — Pied de page : idée (textes V1.54) ; nom accessible « Proposer une idée à Doclia (ouvre votre messagerie) » -->
+    <p><a href="mailto:idees@doclia.fr?subject=Une%20id%C3%A9e%20pour%20Doclia">Proposer une idée<span class="visually-hidden"> à Doclia (ouvre votre messagerie)</span></a></p>
+    <ul class="site-footer__reseaux">
+      <li><a class="reseau" href="https://www.linkedin.com/company/doclia" rel="noopener"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span class="visually-hidden">Doclia sur LinkedIn</span></a></li>
+      <li><a class="reseau" href="https://www.facebook.com/doclia.fr" rel="noopener"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg><span class="visually-hidden">Doclia sur Facebook</span></a></li>
+    </ul>
+    </div>
+    <!-- Texte 12 — Pied de page : copyright -->
+    <p class="site-footer__copy">© Doclia SASU — 2026</p>
+  </div>
+</footer>
+<!-- FIN PIED DE PAGE -->
+</body>
+</html>
