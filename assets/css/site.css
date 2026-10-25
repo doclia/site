@@ -1640,3 +1640,22 @@ html:has(.zoom-dialog[open]) {
 .field legend + .hint {
   margin: 0 0 0.75rem;
 }
+
+/* Vidéo du parcours (V1.59) : 16:9 déclaré, lecture au clic */
+.parcours {
+  margin: 2rem 0 0;
+}
+
+.video-parcours {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--color-bg-soft);
+}
+
+.parcours figcaption {
+  margin-top: 0.75rem;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}

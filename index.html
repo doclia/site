@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Doclia — L’espace de travail scolaire de l’élève et de son AESH</title>
   <!-- Référencement — méta-description -->
-  <meta name="description" content="Tous ses cours rangés par matière, photographiés en classe, adaptés quand il le faut. Pour l’élève accompagné, son AESH travaille avec lui. Liste d’attente ouverte.">
+  <meta name="description" content="L’espace de travail scolaire de l’élève et de son AESH : cours photographiés devenus modifiables, agenda, consignes reformulées, travail à deux en direct.">
   <!-- Référencement — partage -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
@@ -186,16 +186,17 @@
     <div class="container">
       <!-- Texte 5 — La démonstration : titre -->
       <h2 id="demonstration-titre">Deux écrans, un binôme</h2>
-      <!-- Texte 5 — La démonstration : texte -->
-      <p class="lead">À gauche, l’écran de l’AESH. À droite, celui de l’élève. Ce que vous voyez est l’application telle qu’elle fonctionne, pas une maquette.</p>
-      <figure class="demo">
-        <!-- Vidéo IMG-7 — boucle de 10,9 s sans son, refaite le 20/10 (« Écran AESH » / « Écran élève », zoom sur la saisie) (images/img-7-boucle.webm puis .mp4), affiche images/img-7-affiche.webp (img-7-boucle-poster, textes V1.29 ; l’attribut poster n’accepte qu’un fichier : WebP, lu partout). Lecture automatique par assets/js/demo.js, sauf si le visiteur préfère un mouvement réduit ; commandes du lecteur toujours visibles (pause). -->
-        <video class="media demo__video" width="1924" height="722" muted loop playsinline controls preload="none" poster="/images/img-7-affiche.webp" aria-describedby="demo-libelle">
-          <source src="/images/img-7-boucle.webm" type="video/webm">
-          <source src="/images/img-7-boucle.mp4" type="video/mp4">
+      <!-- Texte 5 — La démonstration : texte (textes V1.59) -->
+      <p class="lead">À gauche, l’écran de l’élève. À droite, celui de son AESH. Une vraie séance de travail, de la connexion au journal de bord. Les données sont fictives, mais tout ce que vous voyez fonctionne.</p>
+      <figure class="parcours">
+        <!-- Vidéo du parcours (textes V1.59 ; décision du CEO du 25/10 18:45 : hébergée sur le site, aucun lecteur tiers) : videos/doclia-parcours-binome-1080p.mp4 (H.264 + AAC, 1920 × 1080, 2 min 37), affiche videos/doclia-parcours-binome-affiche.webp (image à 0:20). Lecture au clic seulement : ni autoplay, ni loop, ni muted ; rien n’est chargé avant le clic (preload="none"). -->
+        <video class="media video-parcours" width="1920" height="1080" controls preload="none" playsinline poster="/videos/doclia-parcours-binome-affiche.webp" aria-describedby="parcours-description">
+          <source src="/videos/doclia-parcours-binome-1080p.mp4" type="video/mp4">
         </video>
-        <!-- Texte 5 — La démonstration : libellé de la vidéo (textes V1.26) -->
-        <figcaption id="demo-libelle">Démonstration : l’AESH tape une consigne dans le document ; elle apparaît en direct sur l’écran de l’élève.</figcaption>
+        <!-- Description pour les lecteurs d’écran (textes V1.59) -->
+        <p class="visually-hidden" id="parcours-description">Vidéo en deux écrans côte à côte. À gauche, l’élève se connecte et donne un code à son AESH, qui le saisit à droite. L’élève importe la photo d’une page de cours manuscrite, raturée ; elle devient un document modifiable, rangé dans le classeur de la matière. Il note un devoir dans son agenda. L’AESH et l’élève écrivent dans le même document, chacun sur son écran, et le texte apparaît en direct chez l’autre. L’AESH reformule une consigne trop dense en un geste. Elle résume enfin la séance dans le journal de bord.</p>
+        <!-- Libellé sous la vidéo (textes V1.59) -->
+        <figcaption>Une séance entre Lucas et son AESH, Sophie : se connecter ensemble, scanner une page, la ranger, noter un devoir, écrire à deux en direct, reformuler une consigne, tenir le journal de bord. 2 min 37, musique seule.</figcaption>
       </figure>
     </div>
   </section>
