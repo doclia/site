@@ -45,6 +45,9 @@ for nom in PAGES:
     if re.search(r"\sstyle\s*=", html, re.I): erreurs.append(f"{nom} : attribut style=")
     if re.search(r"\son[a-z]+\s*=", html, re.I): erreurs.append(f"{nom} : attribut on…=")
     if '<html lang="fr">' not in html: erreurs.append(f"{nom} : lang=\"fr\" absent")
+    # Entité HTML coupée par une espace (ex. « &nbsp ; » affiché « ; » à l'écran, 26/10)
+    for m in re.finditer(r"&#?[A-Za-z0-9]+[\s\u00a0\u202f]+;", html):
+        erreurs.append(f"{nom} : entité HTML coupée « {m.group(0)} »")
     t = re.search(r"<title>(.*?)</title>", html, re.S)
     if not t or not t.group(1).strip(): erreurs.append(f"{nom} : <title> vide")
     if len(re.findall(r"<h1\b", html)) != 1: erreurs.append(f"{nom} : il faut exactement un <h1>")
