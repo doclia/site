@@ -376,8 +376,8 @@ html {
   }
 }
 
-/* Ligne de liens complète dès 1088 px : plus petite largeur où les sept liens (« Fonctionnement », « Démo »…, textes V1.51) tiennent sur une ligne avec 16 px entre eux (mesuré le 21/10) ; menu replié en dessous */
-@media (min-width: 68rem) {
+/* Ligne de liens complète dès 1168 px : plus petite largeur où les sept liens (« La séance », « Ce que Doclia change »…, accueil V2 du 26/10) tiennent sur une ligne avec 16 px entre eux, plus une marge (mesuré le 26/10 : une ligne dès 1160 px) ; menu replié en dessous */
+@media (min-width: 73rem) {
   .site-nav {
     margin: 0 auto;
   }
@@ -1668,4 +1668,40 @@ html:has(.zoom-dialog[open]) {
   .paire__item--qr {
     flex: 1.886 1 2px;
   }
+}
+
+/* Accueil V2 (26/10) */
+/* 3.1 : les deux écrans de téléphone ouvrent le bénéfice, sur toute la largeur */
+.step .apercu {
+  padding: 0;
+}
+
+/* 3.3 : texte puis paire, sur toute la largeur */
+@media (min-width: 51.25rem) {
+  .step--plein {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Encadré données suivi de la phrase sur l'IA */
+.callout p {
+  margin: 0;
+}
+
+.callout p + p {
+  margin-top: 0.75rem;
+}
+
+/* Pour qui : ligne sous les cartes */
+.cards__suite {
+  margin: 1.5rem 0 0;
+}
+
+/* Notre histoire : phrase d'introduction et chiffres sous la citation */
+.constat {
+  margin-top: 2.5rem;
+}
+
+.constat .stats__sources {
+  margin-bottom: 0;
 }
