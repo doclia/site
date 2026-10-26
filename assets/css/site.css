@@ -1662,3 +1662,10 @@ html:has(.zoom-dialog[open]) {
   color: var(--color-text-muted);
   font-size: 0.9375rem;
 }
+
+/* 4.2 : la capture du QR code (1435 / 761) a sa propre proportion, pour garder la même hauteur que le téléphone */
+@media (min-width: 48rem) {
+  .paire__item--qr {
+    flex: 1.886 1 2px;
+  }
+}
