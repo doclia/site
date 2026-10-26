@@ -688,8 +688,13 @@ main:focus {
     gap: 3rem;
   }
 
-  .step:nth-child(even) .step__media {
+  .step:nth-of-type(even) .step__media {
     order: 2;
+  }
+
+  /* 4.2 : la paire « QR code / sans ce code, aucun élève » ouvre l'étape, sur toute la largeur */
+  .step__prelude {
+    grid-column: 1 / -1;
   }
 }
 
@@ -824,7 +829,6 @@ main:focus {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "points callout"
-      "paire paire"
       "bandeau bandeau";
     gap: 2rem 3rem;
     align-items: start;
@@ -832,7 +836,6 @@ main:focus {
 
   .split > .points { grid-area: points; }
   .split > .split__bandeau { grid-area: bandeau; }
-  .split > .paire { grid-area: paire; }
   .split > .callout { grid-area: callout; }
 }
 
