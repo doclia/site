@@ -688,10 +688,6 @@ main:focus {
     gap: 3rem;
   }
 
-  .step:nth-of-type(even) .step__media {
-    order: 2;
-  }
-
   /* Éléments d'une étape sur toute la largeur (paire de l'étape 1, téléphones de l'étape 2) */
   .step__prelude {
     grid-column: 1 / -1;
@@ -1707,4 +1703,23 @@ html:has(.zoom-dialog[open]) {
   color: var(--color-text-inverse);
   font-size: 1rem;
   vertical-align: 0.1em;
+}
+
+/* Étapes de la séance (CMO 26/10 15:09, CTO 15:20) : le numéro, le titre et le texte avant les visuels, sans vide ; sur ordinateur, le texte à gauche */
+.step__visuels {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (min-width: 51.25rem) {
+  .step__visuels {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Titre de l'accroche : lignes équilibrées (CSS seul) ; les espaces insécables de « son cours » et « son AESH » restent le filet */
+.hero h1 {
+  text-wrap: balance;
 }
