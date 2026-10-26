@@ -376,8 +376,8 @@ html {
   }
 }
 
-/* Ligne de liens complète dès 1168 px : plus petite largeur où les sept liens (« La séance », « Ce que Doclia change »…, accueil V2 du 26/10) tiennent sur une ligne avec 16 px entre eux, plus une marge (mesuré le 26/10 : une ligne dès 1160 px) ; menu replié en dessous */
-@media (min-width: 73rem) {
+/* Ligne de liens complète dès 1200 px : plus petite largeur où les sept liens (« C’est quoi ? », « La séance », « Comment ça se passe »…, accueil V2 V1.2 du 26/10) tiennent sur une ligne avec 16 px entre eux, plus une marge (mesuré le 26/10 : une ligne dès 1184 px) ; menu replié en dessous */
+@media (min-width: 75rem) {
   .site-nav {
     margin: 0 auto;
   }
@@ -692,7 +692,7 @@ main:focus {
     order: 2;
   }
 
-  /* 4.2 : la paire « QR code / sans ce code, aucun élève » ouvre l'étape, sur toute la largeur */
+  /* Éléments d'une étape sur toute la largeur (paire de l'étape 1, téléphones de l'étape 2) */
   .step__prelude {
     grid-column: 1 / -1;
   }
@@ -730,42 +730,6 @@ main:focus {
 .demo figcaption {
   margin-top: 0.75rem;
   text-align: center;
-}
-
-/* Pour qui */
-.cards {
-  display: grid;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.card {
-  padding: 1.5rem;
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-xs);
-}
-
-.card__icon {
-  width: 3rem;
-  height: 3rem;
-  margin-bottom: 1rem;
-  padding: 0.5rem;
-  box-sizing: content-box;
-  background: var(--color-bg-soft);
-  border-radius: var(--radius-md);
-}
-
-.card p:last-child {
-  margin-bottom: 0;
-}
-
-@media (min-width: 51.25rem) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
 }
 
 /* Page Établissements : étapes */
@@ -1611,13 +1575,6 @@ html:has(.zoom-dialog[open]) {
   margin-top: 2.5rem;
 }
 
-/* Titre de carte en lien (carte AESH de la page principale) */
-.card h3 a {
-  color: inherit;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
 /* Page AESH : la capture de session (1200 / 684) n'a pas le format du tableau de bord élève : sa propre proportion */
 @media (min-width: 48rem) {
   .paire__item--session {
@@ -1663,20 +1620,20 @@ html:has(.zoom-dialog[open]) {
   font-size: 0.9375rem;
 }
 
-/* 4.2 : la capture du QR code (1435 / 761) a sa propre proportion, pour garder la même hauteur que le téléphone */
+/* Étape 1 : la capture du QR code (1435 / 761) a sa propre proportion, pour garder la même hauteur que le téléphone */
 @media (min-width: 48rem) {
   .paire__item--qr {
     flex: 1.886 1 2px;
   }
 }
 
-/* Accueil V2 (26/10) */
-/* 3.1 : les deux écrans de téléphone ouvrent le bénéfice, sur toute la largeur */
+/* Accueil V2 (26/10 ; V1.2 13:37) */
+/* Étape 2 : les deux écrans de téléphone ouvrent l'étape, sur toute la largeur */
 .step .apercu {
   padding: 0;
 }
 
-/* 3.3 : texte puis paire, sur toute la largeur */
+/* Étapes 1 et 5 : texte (puis la paire, à l'étape 1), sur toute la largeur */
 @media (min-width: 51.25rem) {
   .step--plein {
     grid-template-columns: 1fr;
@@ -1692,11 +1649,6 @@ html:has(.zoom-dialog[open]) {
   margin-top: 0.75rem;
 }
 
-/* Pour qui : ligne sous les cartes */
-.cards__suite {
-  margin: 1.5rem 0 0;
-}
-
 /* Notre histoire : phrase d'introduction et chiffres sous la citation */
 .constat {
   margin-top: 2.5rem;
@@ -1704,4 +1656,55 @@ html:has(.zoom-dialog[open]) {
 
 .constat .stats__sources {
   margin-bottom: 0;
+}
+
+/* Accueil V2 (V1.2), section 2 « Doclia, c'est quoi ? » : les quatre publics, pictogramme à gauche */
+.publics {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.public {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.public__icon {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  box-sizing: content-box;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.public p {
+  margin: 0;
+}
+
+@media (min-width: 51.25rem) {
+  .publics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 3rem;
+  }
+}
+
+/* Étapes de la séance : numéro dans une pastille */
+.step__num {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-size: 1rem;
+  vertical-align: 0.1em;
 }

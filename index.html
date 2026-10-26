@@ -36,9 +36,9 @@
     <!-- Texte 1 — En-tête : ancres. Les sept liens figurent deux fois : liste pour ordinateur, puis menu replié pour mobile. Un changement se fait dans les deux. -->
     <nav class="site-nav" aria-label="Navigation principale">
       <ul class="site-nav__list">
+        <li><a href="/#presentation">C’est quoi ?</a></li>
         <li><a href="/#demonstration">La séance</a></li>
-        <li><a href="/#comment-ca-marche">Ce que Doclia change</a></li>
-        <li><a href="/#pour-qui">Pour qui</a></li>
+        <li><a href="/#comment-ca-marche">Comment ça se passe</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
         <li><a href="/#notre-histoire">Notre histoire</a></li>
         <li><a href="/aesh">AESH</a></li>
@@ -48,9 +48,9 @@
         <!-- Texte d'interface — bouton du menu replié (mobile) -->
         <summary class="menu__toggle"><svg class="menu__icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="menu__icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg><span>Menu</span></summary>
         <ul class="menu__panel">
+        <li><a href="/#presentation">C’est quoi ?</a></li>
         <li><a href="/#demonstration">La séance</a></li>
-        <li><a href="/#comment-ca-marche">Ce que Doclia change</a></li>
-        <li><a href="/#pour-qui">Pour qui</a></li>
+        <li><a href="/#comment-ca-marche">Comment ça se passe</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
         <li><a href="/#notre-histoire">Notre histoire</a></li>
         <li><a href="/aesh">AESH</a></li>
@@ -65,7 +65,7 @@
 <!-- FIN EN-TÊTE -->
 
 <main id="contenu" tabindex="-1">
-  <!-- Accueil V2 (docs/Doclia_Site_Accueil_V2.md V1.1, CMO 26/10 12:15 et 12:25 ; GO du CEO 12:14 ; feu vert du CTO 12:34). Une question par section, chaque information à un seul endroit. Retour à la V1 : annuler le seul commit de la V2 (repère accueil-v1). -->
+  <!-- Accueil V2 (docs/Doclia_Site_Accueil_V2.md V1.2, CMO 26/10 13:37 ; GO du CEO 13:37 ; feu vert du CTO 13:42 ; alt du QR code : CEO 13:50). V1.1 : CMO 26/10 12:15 et 12:25 ; GO du CEO 12:14 ; CTO 12:34. Une question par section, chaque information à un seul endroit. Retour à la V1 : annuler le seul commit de la V2 (repère accueil-v1). -->
   <!-- ==================== 1. ACCROCHE ==================== -->
   <section class="hero">
     <div class="container hero__grid">
@@ -75,7 +75,7 @@
         <!-- Accueil V2 §1 — Accroche : sous-titre -->
         <p class="lead">Doclia, l’espace de travail scolaire de l’élève et de son AESH. Gratuit pour les AESH.</p>
         <!-- Accueil V2 §1 — Accroche : boutons (principal, puis secondaire vers la séance) -->
-        <p class="hero__actions"><a class="btn btn--lg" href="#liste-attente">Rejoindre la liste d’attente</a> <a class="btn btn--lg btn--contour" href="#demonstration">Voir une séance (2&nbsp;min)</a></p>
+        <p class="hero__actions"><a class="btn btn--lg" href="#liste-attente">Rejoindre la liste d’attente</a> <a class="btn btn--lg btn--contour" href="#demonstration">Voir une séance (2&nbsp ;min)</a></p>
         <!-- Accueil V2 §1 — Accroche : sous les boutons -->
         <p class="note">Aucune carte bancaire. Votre adresse n’est jamais vendue ni cédée.</p>
       </div>
@@ -84,12 +84,28 @@
     </div>
   </section>
 
-  <!-- ==================== 2. LA SÉANCE ==================== -->
-  <section class="section section--alt" id="demonstration" aria-labelledby="demonstration-titre">
+  <!-- ==================== 2. DOCLIA, C'EST QUOI ? ==================== -->
+  <section class="section section--alt" id="presentation" aria-labelledby="presentation-titre">
     <div class="container">
-      <!-- Accueil V2 §2 — La séance : titre -->
+      <!-- Accueil V2 §2 — titre et texte (V1.2, demande du CEO du 26/10 13:30) -->
+      <h2 id="presentation-titre">Doclia, c’est quoi ?</h2>
+      <p class="lead">Doclia est l’espace de travail scolaire de l’élève, en ligne. Il y retrouve tous ses cours, photographiés en classe et devenus des documents qu’il peut modifier, rangés par matière, avec son agenda et une aide pour reformuler ce qui est trop dense. Quand il est accompagné, son AESH le rejoint dans cet espace, avec son accord, et ils y travaillent ensemble, en direct.</p>
+      <!-- Accueil V2 §2 — Pour qui : quatre lignes. L’ancre #pour-qui (liens publiés) reste posée sur cette liste. -->
+      <ul class="publics" id="pour-qui">
+        <li class="public"><img class="public__icon" src="/images/picto-binome.svg" width="64" height="64" alt="" loading="lazy"><p><strong>L’élève accompagné et son AESH</strong>, au collège et au lycée.</p></li>
+        <li class="public"><img class="public__icon" src="/images/picto-eleve.svg" width="64" height="64" alt="" loading="lazy"><p><strong>L’élève ou l’étudiant qui travaille seul</strong>, du collège à l’université.</p></li>
+        <li class="public"><img class="public__icon" src="/images/picto-aesh.svg" width="64" height="64" alt="" loading="lazy"><p><strong>L’AESH</strong> : gratuit, et ça le restera, sans contrepartie. <a href="/aesh">Page AESH</a></p></li>
+        <li class="public"><img class="public__icon" src="/images/picto-etablissement.svg" width="64" height="64" alt="" loading="lazy"><p><strong>L’établissement</strong> : tous ses binômes équipés, sans liste à tenir ni compte à créer à la place des élèves. <a href="/etablissements">Page Établissements</a></p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ==================== 3. LA SÉANCE ==================== -->
+  <section class="section" id="demonstration" aria-labelledby="demonstration-titre">
+    <div class="container">
+      <!-- Accueil V2 §3 — La séance : titre -->
       <h2 id="demonstration-titre">Une vraie séance, vue des deux côtés</h2>
-      <!-- Accueil V2 §2 — La séance : texte -->
+      <!-- Accueil V2 §3 — La séance : texte -->
       <p class="lead">À gauche, l’écran de l’élève ; à droite, celui de son AESH. Les données sont fictives, mais tout ce que vous voyez fonctionne.</p>
       <figure class="parcours">
         <!-- Vidéo du parcours, inchangée (décision du CEO du 25/10 18:45 : hébergée sur le site, aucun lecteur tiers) : videos/doclia-parcours-binome-v1-1080p.mp4 (H.264 + AAC, 1920 × 1080, 2 min 37), affiche -v1. Lecture au clic seulement ; rien n’est chargé avant le clic (preload="none"). Nom versionné, cache d’un an (CTO 25/10 19:55). Description V1.59 et libellé V1.61 inchangés. -->
@@ -104,14 +120,35 @@
     </div>
   </section>
 
-  <!-- ==================== 3. CE QUE DOCLIA CHANGE ==================== -->
-  <section class="section" id="comment-ca-marche" aria-labelledby="comment-ca-marche-titre">
+  <!-- ==================== 4. COMMENT ÇA SE PASSE ==================== -->
+  <section class="section section--alt" id="comment-ca-marche" aria-labelledby="comment-ca-marche-titre">
     <div class="container">
-      <!-- Accueil V2 §3 — Ce que Doclia change : titre -->
-      <h2 id="comment-ca-marche-titre">Ce que Doclia change</h2>
+      <!-- Accueil V2 §4 — titre (V1.2 : les cinq étapes dans l’ordre réel de l’application et de la vidéo, demande du CEO du 26/10 13:30) -->
+      <h2 id="comment-ca-marche-titre">Une séance, étape par étape</h2>
       <div class="steps">
+        <article class="step step--plein">
+          <div class="step__body">
+            <!-- Accueil V2 §4.1 — titre et texte -->
+            <h3><span class="step__num">1</span> L’élève ouvre son espace à son AESH.</h3>
+            <p>Il lui montre son QR code, ou lui donne son code à six chiffres. Sans ce code, personne n’entre.</p>
+          </div>
+          <!-- Accueil V2 §4.1 — visuels : la paire QR code de l’élève / accueil vide de l’AESH -->
+          <div class="paire step__prelude">
+            <div class="paire__items">
+              <figure class="paire__item paire__item--ordi paire__item--qr">
+                <a class="zoom" href="/images/qr-eleve-grand.webp"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/qr-eleve.avif" type="image/avif"><img src="/images/qr-eleve.webp" width="1435" height="761" alt="Capture de l’application Doclia : la fenêtre « Mon QR code AESH » de l’élève, avec le QR code à montrer et le code à six chiffres à donner à son AESH." loading="lazy"></picture></a>
+                <!-- Accueil V2 §4.1 — Côté élève : fenêtre « Mon QR code AESH » (capture du CEO, 26/10 10:47, monde démo, code et jeton expirés) ; légende V1.2 ; alt : décision du CEO du 26/10 13:50 (CTO 13:50) -->
+                <figcaption>Côté élève : son QR code à montrer, ou son code à six chiffres à donner à son AESH</figcaption>
+              </figure>
+              <figure class="paire__item paire__item--tel">
+                <a class="zoom zoom--tel" href="/images/dash-aesh-grand.webp" data-zoom="tel"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/dash-aesh.avif" type="image/avif"><img src="/images/dash-aesh.webp" width="560" height="1212" alt="Capture de l’application Doclia sur téléphone : l’accueil de l’AESH, qui ne voit aucun élève tant que l’élève ne lui a pas montré son QR code ou donné son code." loading="lazy"></picture></a>
+                <!-- Texte 7 — Tableaux de bord : légende 2 (textes V1.35) -->
+                <figcaption>Côté AESH : sans ce code, aucun élève</figcaption>
+              </figure>
+            </div>
+          </div>
+        </article>
         <article class="step">
-          <!-- Accueil V2 §3.1 — visuels : les deux écrans de téléphone (ancienne bande sous l’accroche, textes V1.30 ; surtitre : consigne du CEO du 23/10), puis la capture 4.1 -->
           <div class="apercu step__prelude">
             <p class="apercu__surtitre">Aperçu de l’application (version smartphone)</p>
             <ul class="apercu__ecrans">
@@ -132,97 +169,68 @@
       </ul>
           </div>
           <div class="step__media">
+            <!-- Accueil V2 §4.2 — visuel : capture 4.1 (« Mes classeurs »), alt inchangé -->
             <a class="zoom" href="/images/capture-4-1-grand.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/capture-4-1.avif" type="image/avif"><img class="media" src="/images/capture-4-1.webp" width="1200" height="948" alt="Capture de l’application Doclia : la page « Mes classeurs » d’un élève, avec des classeurs bien remplis, rangés par matière, dont deux en français." loading="lazy"></picture></a>
           </div>
           <div class="step__body">
-            <!-- Accueil V2 §3.1 — titre et texte -->
-            <h3>Ses cours ne se perdent plus.</h3>
-            <p>Une photo du cours, même raturé, devient un document qu’il peut modifier, rangé dans le classeur de la matière. Ses devoirs sont dans son agenda. Tout se retrouve, sur n’importe quel appareil.</p>
+            <!-- Accueil V2 §4.2 — titre et texte -->
+            <h3><span class="step__num">2</span> Il photographie son cours.</h3>
+            <p>Même raturée, la page devient un document qu’il peut modifier, rangé dans le classeur de la matière. Ses devoirs vont dans son agenda.</p>
           </div>
         </article>
         <article class="step">
           <div class="step__media">
-            <!-- Accueil V2 §3.2 — visuel : capture 4.3 (consigne de SVT avant / après), alt inchangé -->
+            <!-- Accueil V2 §4.3 — visuel : capture 4.2 (session en direct), reprise de /aesh, même fichier et même alt -->
+            <a class="zoom" href="/images/capture-4-2-grand.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/capture-4-2.avif" type="image/avif"><img class="media" src="/images/capture-4-2.webp" width="1200" height="684" alt="Capture de l’application Doclia : l’AESH et l’élève travaillent sur le même document pendant une session en direct." loading="lazy"></picture></a>
+          </div>
+          <div class="step__body">
+            <!-- Accueil V2 §4.3 — titre et texte -->
+            <h3><span class="step__num">3</span> Ils écrivent à deux, en direct.</h3>
+            <p>Même document, même moment, chacun sur son écran : en classe, ou à distance quand l’élève est absent.</p>
+          </div>
+        </article>
+        <article class="step">
+          <div class="step__media">
+            <!-- Accueil V2 §4.4 — visuel : capture 4.3 (consigne de SVT avant / après), alt inchangé -->
             <a class="zoom" href="/images/capture-4-3-grand.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/capture-4-3.avif" type="image/avif"><img class="media" src="/images/capture-4-3.webp" width="1200" height="1180" alt="Capture de l’application Doclia : une consigne de SVT dense saisie par l’élève, et sa version reformulée en trois étapes, avec le même contenu." loading="lazy"></picture></a>
           </div>
           <div class="step__body">
-            <!-- Accueil V2 §3.2 — titre et texte -->
-            <h3>Une consigne trop dense devient claire.</h3>
-            <p>L’élève, ou son AESH, colle le passage : Doclia le reformule, sans faire le travail à sa place. Même contenu, plus accessible.</p>
+            <!-- Accueil V2 §4.4 — titre et texte -->
+            <h3><span class="step__num">4</span> Une consigne trop dense devient claire.</h3>
+            <p>Notre IA la reformule, sans faire le travail à sa place. Même contenu, plus accessible, et c’est l’élève qui valide.</p>
           </div>
         </article>
         <article class="step step--plein">
           <div class="step__body">
-            <!-- Accueil V2 §3.3 — titre et texte -->
-            <h3>Son AESH travaille avec lui, en direct.</h3>
-            <p>L’élève montre son QR code, son AESH le rejoint. Même document, même moment, chacun sur son écran : en classe, ou à distance quand l’élève est absent.</p>
-          </div>
-          <!-- Accueil V2 §3.3 — visuels : la paire QR code de l’élève / accueil vide de l’AESH, légendes inchangées -->
-          <div class="paire step__prelude">
-            <div class="paire__items">
-              <figure class="paire__item paire__item--ordi paire__item--qr">
-                <a class="zoom" href="/images/qr-eleve-grand.webp"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/qr-eleve.avif" type="image/avif"><img src="/images/qr-eleve.webp" width="1435" height="761" alt="Capture de l’application Doclia : la fenêtre « Mon QR code AESH » de l’élève, avec son QR code, sa durée de validité de 5 minutes et le code à 6 chiffres à donner à son AESH." loading="lazy"></picture></a>
-                <!-- Texte 7 — Côté élève : capture de la fenêtre « Mon QR code AESH » (capture du CEO, 26/10 10:47, monde démo, code et jeton expirés ; CTO 10:08) ; légende rétablie et alt proposé par le CTO, à confirmer par le CMO -->
-                <figcaption>Côté élève : son QR code, qu’il montre à son AESH</figcaption>
-              </figure>
-              <figure class="paire__item paire__item--tel">
-                <a class="zoom zoom--tel" href="/images/dash-aesh-grand.webp" data-zoom="tel"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/dash-aesh.avif" type="image/avif"><img src="/images/dash-aesh.webp" width="560" height="1212" alt="Capture de l’application Doclia sur téléphone : l’accueil de l’AESH, qui ne voit aucun élève tant que l’élève ne lui a pas montré son QR code ou donné son code." loading="lazy"></picture></a>
-                <!-- Texte 7 — Tableaux de bord : légende 2 (textes V1.35) -->
-                <figcaption>Côté AESH : sans ce code, aucun élève</figcaption>
-              </figure>
-            </div>
+            <!-- Accueil V2 §4.5 — titre et texte (sans visuel) -->
+            <h3><span class="step__num">5</span> L’AESH résume la séance dans le journal de bord.</h3>
+            <p>Rien ne se perd d’une séance à l’autre.</p>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ==================== 4. L'ÉLÈVE GARDE LA MAIN ==================== -->
-  <section class="section section--alt" id="l-eleve-garde-la-main" aria-labelledby="l-eleve-garde-la-main-titre">
+  <!-- ==================== 5. L'ÉLÈVE GARDE LA MAIN ==================== -->
+  <section class="section" id="l-eleve-garde-la-main" aria-labelledby="l-eleve-garde-la-main-titre">
     <div class="container">
-      <!-- Accueil V2 §4 — titre (consigne du CEO du 18/10 16:46) -->
+      <!-- Accueil V2 §5 — titre (consigne du CEO du 18/10 16:46) -->
       <h2 id="l-eleve-garde-la-main-titre">C’est son espace : à l’élève de décider.</h2>
       <div class="split">
         <ul class="points">
-          <!-- Accueil V2 §4 — trois points -->
-          <li><strong>Sans son code, personne n’entre.</strong> Le nom de l’AESH reste affiché pendant toute la session.</li>
+          <!-- Accueil V2 §5 — trois points (V1.2 : premier point) -->
+          <li><strong>Il voit qui est connecté.</strong> Le nom de l’AESH reste affiché pendant toute la session.</li>
           <li><strong>Il ferme la session d’un geste.</strong> Hors session, l’AESH ne voit plus rien. Seule exception, si la famille l’a autorisé : un accès d’urgence, limité et visible dans le journal.</li>
           <li><strong>La famille suit.</strong> Le journal de bord garde ce qui a été fait pendant les séances.</li>
         </ul>
         <!-- Image IMG-6 — bandeau de session, inchangé (affiché dès 768 px, masqué sur téléphone) -->
         <a class="zoom zoom--bandeau split__bandeau" href="/images/img-6-bandeau-grand.webp" data-zoom="bandeau"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/img-6-bandeau.avif" type="image/avif"><img class="media bandeau" src="/images/img-6-bandeau.webp" width="1920" height="68" alt="Capture de l’application Doclia : le bandeau de session de l’élève indique le nom de l’AESH connecté, le temps restant et un bouton pour terminer la session." loading="lazy"></picture></a>
-        <!-- Accueil V2 §4 — Encadré données : texte du COS du 14/10, inchangé ; puis la phrase sur l’IA (V1.1, CMO 26/10 12:25, sur la formulation du COS de 12:20) -->
+        <!-- Accueil V2 §5 — Encadré données : texte du COS du 14/10, inchangé ; puis la phrase sur l’IA (V1.1, CMO 26/10 12:25, sur la formulation du COS de 12:20) -->
         <div class="callout">
           <p>Les documents et les données de votre enfant sont conservés en France. Les services que nous ne faisons pas nous-mêmes sont encadrés par contrat, conformément au RGPD. Nous ne vendons ni ne cédons jamais vos données, et nous n’utilisons aucun cookie ni traceur publicitaire, ni sur le site ni dans l’application. Le détail figurera dans la politique de confidentialité de l’application, publiée avant son ouverture.</p>
           <p>Doclia s’appuie sur l’intelligence artificielle pour lire les photos de cours et reformuler les passages difficiles. L’élève, ou son AESH, garde toujours le dernier mot.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ==================== 5. POUR QUI ==================== -->
-  <section class="section" id="pour-qui" aria-labelledby="pour-qui-titre">
-    <div class="container">
-      <!-- Accueil V2 §5 — titre -->
-      <h2 id="pour-qui-titre">Pour l’élève, son AESH et son établissement</h2>
-      <div class="cards">
-        <article class="card">
-          <img class="card__icon" src="/images/picto-aesh.svg" width="64" height="64" alt="" loading="lazy">
-          <h3>L’AESH</h3>
-          <!-- Accueil V2 §5 — Carte AESH -->
-          <p>Gratuit, et ça le restera, sans contrepartie. Un espace de travail avec l’élève, des documents adaptés en quelques gestes, un suivi qui ne se perd pas d’une séance à l’autre.</p>
-          <p><a href="/aesh">Page AESH</a></p>
-        </article>
-        <article class="card">
-          <img class="card__icon" src="/images/picto-etablissement.svg" width="64" height="64" alt="" loading="lazy">
-          <h3>L’établissement</h3>
-          <!-- Accueil V2 §5 — Carte Établissement -->
-          <p>Tous les binômes équipés, sans liste à tenir ni compte à créer à la place des élèves. L’établissement ne lit jamais les cours ni le journal de l’élève.</p>
-          <p><a href="/etablissements">Page Établissements</a></p>
-        </article>
-      </div>
-      <!-- Accueil V2 §5 — ligne sous les cartes -->
-      <p class="cards__suite">Sans AESH aussi : du collège à l’université, chaque élève ou étudiant peut avoir son espace de travail (offre Élève).</p>
     </div>
   </section>
 
@@ -248,7 +256,7 @@
         </article>
         <article class="price">
           <h3>Établissement</h3>
-          <p class="price__amount">À partir de 690&nbsp;€&nbsp;par&nbsp;an</p>
+          <p class="price__amount">À partir de 690&nbsp ;€&nbsp ;par&nbsp ;an</p>
           <p class="price__label">Ce qui est inclus</p>
           <p>De 8 à 100 élèves : <a href="/etablissements">voir la page Établissements</a>.</p>
         </article>
