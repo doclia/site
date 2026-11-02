@@ -1083,6 +1083,13 @@ main:focus {
   line-height: 1.75rem;
 }
 
+/* Pages légales à deux niveaux (politique de confidentialité du 02/11 : parties A, B, C, puis articles) */
+.legal h3 {
+  margin-top: 1.75rem;
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+}
+
 .legal p,
 .legal li {
   max-width: var(--readable);
