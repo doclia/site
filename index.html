@@ -20,6 +20,7 @@
   <script src="/assets/js/menu.js" defer></script>
   <script src="/assets/js/zoom.js" defer></script>
   <script src="/assets/js/profil.js" defer></script>
+  <script src="/assets/js/provenance.js" defer></script>
   <!-- Mesure d’audience : Vercel Web Analytics, sans cookie, servi par le même domaine (décision CEO 18/10 18:48 ; brief §2.4) -->
   <script src="/_vercel/insights/script.js" defer></script>
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
@@ -320,7 +321,7 @@
       <h2 id="liste-attente-titre">Recevez votre invitation</h2>
       <p class="lead">Doclia est en préparation. Inscrivez-vous : vous serez prévenu à l’ouverture et invité à l’essayer, gratuitement. Votre adresse ne sert qu’à cela.</p>
       <!-- Formulaire — branché sur la fonction waitlist (S3, contrat CTO du 19/10 19:44) ; envoi accepté depuis https://doclia.fr et https://doclia-site.vercel.app (WAITLIST_ALLOWED_ORIGINS, bascule S6 du 21/10) -->
-      <form class="form" method="post" action="https://rmrereijbpixjfzuozxq.supabase.co/functions/v1/waitlist" enctype="application/x-www-form-urlencoded">
+      <form class="form" data-provenance method="post" action="https://rmrereijbpixjfzuozxq.supabase.co/functions/v1/waitlist" enctype="application/x-www-form-urlencoded">
         <!-- Texte 10 — Formulaire : ligne en tête (champs obligatoires) -->
         <p class="form__required">Tous les champs sont obligatoires, sauf la case « plusieurs enfants ».</p>
         <div class="field">
