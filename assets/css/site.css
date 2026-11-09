@@ -1770,3 +1770,17 @@ html:has(.zoom-dialog[open]) {
   color: var(--color-primary);
   font-size: 1.125rem;
 }
+
+.familles__visuel {
+  margin: 1.5rem 0 0;
+}
+
+.familles__visuel--tel {
+  max-width: 16rem;
+}
+
+.familles__mention {
+  margin-top: 0.75rem;
+  color: var(--color-secondary-text);
+  font-size: 0.875rem;
+}

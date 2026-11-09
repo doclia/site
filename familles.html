@@ -10,13 +10,14 @@
   <link rel="stylesheet" href="/assets/css/site.css">
   <script src="/assets/js/menu.js" defer></script>
   <script src="/assets/js/provenance.js" defer></script>
+  <script src="/assets/js/zoom.js" defer></script>
   <!-- Mesure d’audience : Vercel Web Analytics, sans cookie, servi par le même domaine (décision CEO 18/10 18:48 ; brief §2.4) -->
   <script src="/_vercel/insights/script.js" defer></script>
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/assets/icons/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/icons/favicon-192.png">
 </head>
-<body>
+<body data-profil="parent">
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 <!-- EN-TÊTE — identique sur toutes les pages (contrôlé par outils/verifier.py) -->
 <header class="site-header">
@@ -71,6 +72,11 @@
       <h2 id="familles-ses-cours-toujours-a-titre">Ses cours, toujours à portée de main</h2>
       <p>Une feuille de cours manuscrite ou imprimée, même avec des ratures ? Il suffit de la photographier pour la transformer en document modifiable.</p>
       <p>L’élève la range ensuite dans le classeur de la matière, qu’il conserve d’une année à l’autre.</p>
+      <!-- Page Familles — visuel : scan sur téléphone (même fichier et même alt que la page principale ; CMO 09/11 22:33) ; mention « données fictives » sous la première image (règle 4 du COS) -->
+      <figure class="familles__visuel familles__visuel--tel">
+        <a class="zoom zoom--tel" href="/images/tel-a-photo-grand.webp" data-zoom="tel"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/tel-a-photo.avif" type="image/avif"><img src="/images/tel-a-photo.webp" width="560" height="1129" alt="Capture de l’application Doclia sur téléphone : l’élève photographie une feuille de cours." loading="lazy"></picture></a>
+      </figure>
+      <p class="familles__mention">Images réelles de l’application, données fictives.</p>
     </div>
   </section>
 
@@ -80,6 +86,10 @@
       <h2 id="familles-une-consigne-plus-facile-titre">Une consigne plus facile à comprendre</h2>
       <p>Certaines consignes sont longues ou difficiles à comprendre.</p>
       <p>Doclia peut en proposer une version plus simple, conçue pour en conserver le sens. L’élève prend le temps de la relire, de la vérifier, puis de l’utiliser s’il le souhaite.</p>
+      <!-- Page Familles — visuel : consigne reformulée (capture 4.3, même alt que la page principale) -->
+      <figure class="familles__visuel">
+        <a class="zoom" href="/images/capture-4-3-grand.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/capture-4-3.avif" type="image/avif"><img class="media" src="/images/capture-4-3.webp" width="1200" height="1180" alt="Capture de l’application Doclia : une consigne de SVT dense saisie par l’élève, et sa version reformulée en trois étapes, avec le même contenu." loading="lazy"></picture></a>
+      </figure>
     </div>
   </section>
 
@@ -90,6 +100,10 @@
       <p>L’élève rédige son cours sur son ordinateur. Son AESH voit le texte apparaître en temps réel sur son propre écran et peut intervenir pour l’aider, compléter ou corriger directement le document.</p>
       <p>Et lorsque l’élève ne peut pas écrire lui-même, l’AESH peut prendre le relais : le texte apparaît aussitôt sur l’écran de l’élève.</p>
       <p>Dans les deux cas, ils travaillent ensemble sur le même document, chacun depuis son écran.</p>
+      <!-- Page Familles — visuel : écriture à deux, sur ordinateur (capture 4.2, même alt que la page principale) -->
+      <figure class="familles__visuel">
+        <a class="zoom" href="/images/capture-4-2-grand.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/capture-4-2.avif" type="image/avif"><img class="media" src="/images/capture-4-2.webp" width="1200" height="684" alt="Capture de l’application Doclia : l’AESH et l’élève travaillent sur le même document pendant une session en direct." loading="lazy"></picture></a>
+      </figure>
     </div>
   </section>
 
@@ -109,6 +123,10 @@
       <p>Le journal de bord permet de conserver une trace des observations faites pendant les cours.</p>
       <p>Facultatif, il est renseigné par l’AESH pendant la session. La famille peut le consulter dans l’espace de l’enfant.</p>
       <p class="familles__accent"><strong>Ce que l’AESH a observé, daté, lisible à la maison.</strong></p>
+      <!-- Page Familles — visuel : journal de bord, côté AESH, une entrée écrite par l’AESH (texte V3 ; CPO 22:04) -->
+      <figure class="familles__visuel">
+        <a class="zoom" href="/images/journal-bord-grand.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/journal-bord.avif" type="image/avif"><img class="media" src="/images/journal-bord.webp" width="1200" height="1118" alt="Capture de l’application Doclia : le journal de bord, où l’AESH note ce qui a été fait pendant la séance." loading="lazy"></picture></a>
+      </figure>
     </div>
   </section>
 

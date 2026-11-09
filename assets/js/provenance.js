@@ -41,6 +41,17 @@
     return chemin(lire('landing')) || chemin(window.location.pathname);
   }
 
+  // 0. Profil de la page (CMO 09/11 22:33) : sur une page qui porte <body data-profil="…"> (/familles : « parent »),
+  //    les liens vers le formulaire (« /#liste-attente », dont le bouton de l'en-tête commun) présélectionnent ce profil,
+  //    comme le bouton du bas. L'en-tête reste identique sur toutes les pages. Sans JS : formulaire sans présélection.
+  var profilPage = (document.body && document.body.getAttribute('data-profil')) || '';
+  if (/^[a-z]+$/.test(profilPage)) {
+    var versFormulaire = document.querySelectorAll('a[href="/#liste-attente"]');
+    for (var k = 0; k < versFormulaire.length; k++) {
+      versFormulaire[k].setAttribute('href', '/?profil=' + profilPage + '#liste-attente');
+    }
+  }
+
   var utm = source();
 
   // 1. Report dans les liens internes vers l'accueil
