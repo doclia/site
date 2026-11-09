@@ -12,7 +12,7 @@ import pathlib, re, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGES = ["index.html", "etablissements.html", "aesh.html", "merci.html", "inscription-confirmee.html", "reponse-enregistree.html", "demande-envoyee.html", "demande-erreur.html",
-         "404.html", "mentions-legales.html", "confidentialite.html", "conditions.html", "erreur.html", "confirmer.html", "lien-expire.html"]
+         "404.html", "mentions-legales.html", "confidentialite.html", "conditions.html", "familles.html", "erreur.html", "confirmer.html", "lien-expire.html"]
 BLOCS = {
     "en-tête": re.compile(r'<a class="skip-link".*?<!-- FIN EN-TÊTE -->', re.S),
     "pied de page": re.compile(r'<!-- PIED DE PAGE.*?<!-- FIN PIED DE PAGE -->', re.S),
