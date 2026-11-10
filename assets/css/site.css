@@ -1784,10 +1784,13 @@ html:has(.zoom-dialog[open]) {
   max-width: 28rem;
 }
 
-/* Titre de /familles (consigne du CEO, 10/11 16:00) : « d’un jour à l’autre, » et « d’une année à l’autre » restent d’un bloc
-   dès 768 px ; en dessous, ils peuvent se couper (téléphone, et espacement du texte agrandi WCAG 1.4.12) */
-@media (min-width: 48rem) {
-  .groupe {
-    white-space: nowrap;
+/* Titre de /familles (consigne du CEO, 10/11 16:00 et 16:05) : « d’un jour à l’autre, d’une année à l’autre » sur une seule ligne.
+   À 32 px (768 à 1023 px), elle tient dans la colonne de 736 px. À 44 px (dès 1024 px), elle mesure environ 790 px :
+   le titre s’élargit à 52rem (832 px), sans jamais toucher le bord de l’écran (bord droit à 976 px pour un écran de 1024).
+   Pas de « nowrap » : si l’espacement du texte est agrandi (WCAG 1.4.12), la ligne peut se couper au lieu de déborder. */
+@media (min-width: 64rem) {
+  .titre-familles {
+    width: 52rem;
+    max-width: none;
   }
 }
