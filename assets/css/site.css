@@ -1779,6 +1779,11 @@ html:has(.zoom-dialog[open]) {
   max-width: 16rem;
 }
 
+/* Journal de bord : capture presque carrée, à gros caractères ; réduite pour peser comme les autres (consigne du CEO, 10/11 13:03) */
+.familles__visuel--journal {
+  max-width: 28rem;
+}
+
 .familles__mention {
   margin-top: 0.75rem;
   color: var(--color-secondary-text);
