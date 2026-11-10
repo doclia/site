@@ -1783,3 +1783,11 @@ html:has(.zoom-dialog[open]) {
 .familles__visuel--journal {
   max-width: 28rem;
 }
+
+/* Titre de /familles (consigne du CEO, 10/11 16:00) : « d’un jour à l’autre, » et « d’une année à l’autre » restent d’un bloc
+   dès 768 px ; en dessous, ils peuvent se couper (téléphone, et espacement du texte agrandi WCAG 1.4.12) */
+@media (min-width: 48rem) {
+  .groupe {
+    white-space: nowrap;
+  }
+}
