@@ -1730,3 +1730,57 @@ html:has(.zoom-dialog[open]) {
 .hero h1 {
   text-wrap: balance;
 }
+
+/* Page Familles (09/11) : le prix annuel en premier plan, la note de TVA en retrait ; la phrase forte du journal de bord */
+.prix-familles {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prix-familles li {
+  padding: 1.25rem 1.5rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.prix-familles strong {
+  display: block;
+  color: var(--color-primary);
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 760;
+}
+
+@media (min-width: 51.25rem) {
+  .prix-familles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.prix-familles__note {
+  color: var(--color-secondary-text);
+  font-size: 0.875rem;
+}
+
+.familles__accent {
+  color: var(--color-primary);
+  font-size: 1.125rem;
+}
+
+.familles__visuel {
+  margin: 1.5rem 0 0;
+}
+
+.familles__visuel--tel {
+  max-width: 16rem;
+}
+
+.familles__mention {
+  margin-top: 0.75rem;
+  color: var(--color-secondary-text);
+  font-size: 0.875rem;
+}
