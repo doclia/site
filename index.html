@@ -39,9 +39,10 @@
       <ul class="site-nav__list">
         <li><a href="/#presentation">Présentation</a></li>
         <li><a href="/#demonstration">La séance</a></li>
-        <li><a href="/#comment-ca-marche">Comment ça se passe</a></li>
+        <li><a href="/#comment-ca-marche">Déroulement</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
-        <li><a href="/#notre-histoire">Notre histoire</a></li>
+        <li><a href="/#notre-histoire">Histoire</a></li>
+        <li><a href="/familles">Familles</a></li>
         <li><a href="/aesh">AESH</a></li>
         <li><a href="/etablissements">Établissements</a></li>
       </ul>
@@ -51,9 +52,10 @@
         <ul class="menu__panel">
         <li><a href="/#presentation">Présentation</a></li>
         <li><a href="/#demonstration">La séance</a></li>
-        <li><a href="/#comment-ca-marche">Comment ça se passe</a></li>
+        <li><a href="/#comment-ca-marche">Déroulement</a></li>
         <li><a href="/#tarifs">Tarifs</a></li>
-        <li><a href="/#notre-histoire">Notre histoire</a></li>
+        <li><a href="/#notre-histoire">Histoire</a></li>
+        <li><a href="/familles">Familles</a></li>
         <li><a href="/aesh">AESH</a></li>
         <li><a href="/etablissements">Établissements</a></li>
         </ul>
@@ -107,14 +109,14 @@
       <!-- Accueil V2 §3 — La séance : titre -->
       <h2 id="demonstration-titre">Une vraie séance, vue des deux côtés</h2>
       <!-- Accueil V2 §3 — La séance : texte -->
-      <p class="lead">À gauche, l’écran de l’élève ; à droite, celui de son AESH. Les données sont fictives, mais tout ce que vous voyez fonctionne.</p>
+      <p class="lead">À gauche, l’écran de l’élève ; à droite, celui de son AESH.</p>
       <figure class="parcours">
         <!-- Vidéo du parcours, inchangée (décision du CEO du 25/10 18:45 : hébergée sur le site, aucun lecteur tiers) : videos/doclia-parcours-binome-v1-1080p.mp4 (H.264 + AAC, 1920 × 1080, 2 min 37), affiche -v1. Lecture au clic seulement ; rien n’est chargé avant le clic (preload="none"). Nom versionné, cache d’un an (CTO 25/10 19:55). Description V1.59 et libellé V1.61 inchangés. -->
         <video class="media video-parcours" width="1920" height="1080" controls preload="none" playsinline poster="/videos/doclia-parcours-binome-v1-affiche.webp" aria-describedby="parcours-description">
           <source src="/videos/doclia-parcours-binome-v1-1080p.mp4" type="video/mp4">
         </video>
         <!-- Description pour les lecteurs d’écran (textes V1.59) -->
-        <p class="visually-hidden" id="parcours-description">Vidéo en deux écrans côte à côte. À gauche, l’élève se connecte et donne un code à son AESH, qui le saisit à droite. L’élève importe la photo d’une page de cours manuscrite, raturée ; elle devient un document modifiable, rangé dans le classeur de la matière. Il note un devoir dans son agenda. L’AESH et l’élève écrivent dans le même document, chacun sur son écran, et le texte apparaît en direct chez l’autre. L’AESH reformule une consigne trop dense en un geste. Elle résume enfin la séance dans le journal de bord.</p>
+        <p class="visually-hidden" id="parcours-description">Vidéo en deux écrans côte à côte. À gauche, l’élève se connecte et donne un code à son AESH, qui le saisit à droite. L’élève importe la photo d’une page de cours manuscrite, raturée ; elle devient un document modifiable, rangé dans le classeur de la matière. Il note un devoir dans son agenda. L’AESH et l’élève écrivent dans le même document, chacun sur son écran, et le texte apparaît en direct chez l’autre. L’AESH reformule une consigne trop dense en un geste. Elle résume enfin le cours dans le journal de bord.</p>
         <!-- Libellé sous la vidéo (textes V1.61) -->
         <figcaption>Une séance entre Lucas et son AESH, Sophie : se connecter ensemble, scanner une page, la ranger, noter un devoir, écrire à deux en direct, reformuler une consigne, tenir le journal de bord.</figcaption>
       </figure>
@@ -207,12 +209,12 @@
         <article class="step">
           <div class="step__body">
             <!-- Accueil V2 §4.5 — titre et texte -->
-            <h3><span class="step__num">5</span> L’AESH résume la séance dans le journal de bord.</h3>
-            <p>Rien ne se perd d’une séance à l’autre.</p>
+            <h3><span class="step__num">5</span> L’AESH résume le cours dans le journal de bord.</h3>
+            <p>Rien ne se perd d’un cours à l’autre : les informations importantes, des observations, des notes de suivi peuvent y être consignées. Ce journal est consultable par l’élève ou sa famille, ou les autres AESH qui accompagnent l’élève.</p>
           </div>
           <div class="step__media">
             <!-- Accueil V2 §4.5 — visuel : capture du journal de bord, côté AESH (session avec Lucas, monde démo), prise le 26/10 16:30 par DEV-Site dans le Chrome du CEO, à son accord, au même cadrage que sa capture de 16:00 mais en double densité (1370 × 1276), non retouchée, bandeau compris ; texte de la saisie tapé sans être enregistré ; alt : textes V1.66 (CMO 26/10 16:00, CTO 16:02) ; vue agrandie images/journal-bord-grand.webp -->
-            <a class="zoom" href="/images/journal-bord-grand.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/journal-bord.avif" type="image/avif"><img class="media" src="/images/journal-bord.webp" width="1200" height="1118" alt="Capture de l’application Doclia : le journal de bord, où l’AESH note ce qui a été fait pendant la séance." loading="lazy"></picture></a>
+            <a class="zoom" href="/images/journal-bord-grand.webp"><span class="visually-hidden">Agrandir : </span><picture class="step__capture"><source srcset="/images/journal-bord.avif" type="image/avif"><img class="media" src="/images/journal-bord.webp" width="1200" height="1118" alt="Capture de l’application Doclia : le journal de bord, où l’AESH note ce qui a été fait pendant le cours." loading="lazy"></picture></a>
           </div>
         </article>
       </div>
@@ -229,7 +231,7 @@
           <!-- Accueil V2 §5 — trois points (V1.2 : premier point) -->
           <li><strong>Il voit qui est connecté.</strong> Le nom de l’AESH reste affiché pendant toute la session.</li>
           <li><strong>Il ferme la session d’un geste.</strong> Hors session, l’AESH ne voit plus rien. Seule exception, si la famille l’a autorisé : un accès d’urgence, limité et visible dans le journal.</li>
-          <li><strong>La famille suit.</strong> Le journal de bord garde ce qui a été fait pendant les séances.</li>
+          <li><strong>La famille suit.</strong> Le journal de bord garde ce qui a été fait pendant les cours.</li>
         </ul>
         <!-- Image IMG-6 — bandeau de session, inchangé (affiché dès 768 px, masqué sur téléphone) -->
         <a class="zoom zoom--bandeau split__bandeau" href="/images/img-6-bandeau-grand.webp" data-zoom="bandeau"><span class="visually-hidden">Agrandir : </span><picture><source srcset="/images/img-6-bandeau.avif" type="image/avif"><img class="media bandeau" src="/images/img-6-bandeau.webp" width="1920" height="68" alt="Capture de l’application Doclia : le bandeau de session de l’élève indique le nom de l’AESH connecté, le temps restant et un bouton pour terminer la session." loading="lazy"></picture></a>

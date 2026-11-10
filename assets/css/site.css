@@ -376,7 +376,7 @@ html {
   }
 }
 
-/* Ligne de liens complète dès 1200 px : plus petite largeur où les sept liens (« C’est quoi ? », « La séance », « Comment ça se passe »…, accueil V2 V1.2 du 26/10) tiennent sur une ligne avec 16 px entre eux, plus une marge (mesuré le 26/10 : une ligne dès 1184 px) ; menu replié en dessous */
+/* Ligne de liens complète dès 1200 px : les huit liens (« Présentation », « La séance », « Déroulement », « Tarifs », « Histoire », « Familles », « AESH », « Établissements », menu du 10/11) tiennent sur une ligne avec 16 px entre eux (mesuré le 10/11 : une ligne à 1200 px) ; menu replié en dessous */
 @media (min-width: 75rem) {
   .site-nav {
     margin: 0 auto;
@@ -1782,10 +1782,4 @@ html:has(.zoom-dialog[open]) {
 /* Journal de bord : capture presque carrée, à gros caractères ; réduite pour peser comme les autres (consigne du CEO, 10/11 13:03) */
 .familles__visuel--journal {
   max-width: 28rem;
-}
-
-.familles__mention {
-  margin-top: 0.75rem;
-  color: var(--color-secondary-text);
-  font-size: 0.875rem;
 }
