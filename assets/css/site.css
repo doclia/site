@@ -1794,3 +1794,44 @@ html:has(.zoom-dialog[open]) {
     max-width: none;
   }
 }
+
+/* Boutons d’inscription de /familles (mandat du CMO, 11/11 11:17) */
+.familles__cta {
+  margin-top: 1.5rem;
+}
+
+/* Bouton fixe en bas de l’écran : téléphone seulement. Cible de 52 px ; le pied de page reçoit une marge basse pour que rien ne reste masqué. */
+.cta-fixe {
+  display: none;
+}
+
+@media (max-width: 47.9375rem) {
+  .cta-fixe {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    padding: 0.5rem 1rem;
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+    background: #fff;
+    border-top: 1px solid var(--color-border);
+    box-shadow: 0 -2px 8px rgba(16, 24, 40, 0.08);
+  }
+
+  .cta-fixe .btn {
+    display: flex;
+    width: 100%;
+  }
+
+  .avec-cta-fixe .site-footer {
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media print {
+  .cta-fixe {
+    display: none;
+  }
+}
