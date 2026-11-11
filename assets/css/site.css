@@ -1820,6 +1820,11 @@ html:has(.zoom-dialog[open]) {
     box-shadow: 0 -2px 8px rgba(16, 24, 40, 0.08);
   }
 
+  /* État posé par assets/js/cta-fixe.js seulement : hors de l’écran, du clavier et des lecteurs d’écran. Aucune animation. */
+  .cta-fixe--cache {
+    visibility: hidden;
+  }
+
   .cta-fixe .btn {
     display: flex;
     width: 100%;
