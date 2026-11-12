@@ -8,10 +8,14 @@
   try {
     if (!('IntersectionObserver' in window)) { return; }
     var fixe = document.querySelector('.cta-fixe');
-    var boutons = document.querySelectorAll('main .btn--lg');
-    if (!fixe || boutons.length < 3) { return; }
+    if (!fixe) { return; }
+    /* Boutons du texte seulement : ceux du bouton fixe sont écartés (fragilité relevée par le CTO, 11/11 14:10). */
+    var boutons = Array.prototype.filter.call(document.querySelectorAll('main .btn--lg'), function (b) {
+      return !fixe.contains(b);
+    });
+    if (boutons.length < 2) { return; }
     var premier = boutons[0];
-    var dernier = boutons[boutons.length - 2]; /* le dernier de la liste est le bouton fixe lui-même */
+    var dernier = boutons[boutons.length - 1];
     var premierDepasse = false;
     var dernierVisible = false;
     function appliquer() {
